@@ -185,7 +185,7 @@ public class ModelClientes {
     }
     
     public void initValues(){
-        conection.executeQuery("SELECT id_cliente, nombre, ap_paterno, ap_materno, telefono, email, rfc, calle, numero, colonia, ciudad, estado FROM contactos;");
+        conection.executeQuery("SELECT id_cliente, nombre, ap_paterno, ap_materno, telefono, email, rfc, calle, numero, colonia, ciudad, estado FROM clientes;");
         conection.moveNext();
         setValues();
     }

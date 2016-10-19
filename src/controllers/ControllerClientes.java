@@ -72,8 +72,8 @@ public class ControllerClientes implements ActionListener{
     private void showValues(){
         viewClientes.jtf_id_cliente.setText(""+modelClientes.getId_cliente());
         viewClientes.jtf_nombre.setText(modelClientes.getNombre());
-        viewClientes.jtf_ap_materno.setText(modelClientes.getAp_paterno());
-        viewClientes.jtf_ap_materno.setText(modelClientes.getAp_paterno());
+        viewClientes.jtf_ap_paternno.setText(modelClientes.getAp_paterno());
+        viewClientes.jtf_ap_materno.setText(modelClientes.getAp_materno());
         viewClientes.jtf_telefono.setText(""+modelClientes.getTelefono());
         viewClientes.jtf_email.setText(modelClientes.getEmail());
         viewClientes.jtf_rfc.setText(modelClientes.getRfc());
