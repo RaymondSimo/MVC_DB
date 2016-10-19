@@ -3,7 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Documents/NetBeansProjectsp/MVC_DB/src/views/View_proveedor.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/views/ViewMain.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/models/ModelMain.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/models/ModelClientes.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/controllers/ControllerMain.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/main/Main.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/controllers/ControllerProvedores.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/models/ModelProductos.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/views/View_productos.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/views/view_provedores.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/views/ViewClientes.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/controllers/ControllerProductos.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Desarrollo%20de%20app2/MVC_DB/src/controllers/ControllerClientes.java</file>
         </group>
     </open-files>
 </project-private>

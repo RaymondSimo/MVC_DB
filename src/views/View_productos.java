@@ -120,46 +120,48 @@ public class View_productos extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jl_id_producto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtf_id_productos, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(jl_producto)
-                            .addGap(20, 20, 20)
-                            .addComponent(jtf_producto))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jl_descripcion)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jtf_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jl_precio_compra))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jl_existencias)
-                            .addComponent(jl_precio_venta))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jtf_precio_venta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(jtf_existencias, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtf_precio_compra))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+                .addGap(103, 103, 103)
                 .addComponent(jbtnFirst)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbtnPrevious)
                 .addGap(18, 18, 18)
                 .addComponent(jbtnNext)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbtnLast)
-                .addGap(0, 193, Short.MAX_VALUE))
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jl_id_producto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtf_id_productos))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jl_producto)
+                                .addGap(20, 20, 20)
+                                .addComponent(jtf_producto))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jl_descripcion)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtf_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(jl_precio_compra))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jl_existencias)
+                                    .addComponent(jl_precio_venta))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtf_precio_compra, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                            .addComponent(jtf_precio_venta)
+                            .addComponent(jtf_existencias)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,9 +192,9 @@ public class View_productos extends javax.swing.JPanel {
                     .addComponent(jbtnPrevious)
                     .addComponent(jbtnNext)
                     .addComponent(jbtnLast))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -217,22 +219,22 @@ public class View_productos extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JButton jbtnFirst;
-    private javax.swing.JButton jbtnLast;
-    private javax.swing.JButton jbtnNext;
-    private javax.swing.JButton jbtnPrevious;
+    public javax.swing.JButton jbtnFirst;
+    public javax.swing.JButton jbtnLast;
+    public javax.swing.JButton jbtnNext;
+    public javax.swing.JButton jbtnPrevious;
     private javax.swing.JLabel jl_descripcion;
     private javax.swing.JLabel jl_existencias;
     private javax.swing.JLabel jl_id_producto;
     private javax.swing.JLabel jl_precio_compra;
     private javax.swing.JLabel jl_precio_venta;
     private javax.swing.JLabel jl_producto;
-    private javax.swing.JTable jtb_tabla;
-    private javax.swing.JTextField jtf_descripcion;
-    private javax.swing.JTextField jtf_existencias;
-    private javax.swing.JTextField jtf_id_productos;
-    private javax.swing.JTextField jtf_precio_compra;
-    private javax.swing.JTextField jtf_precio_venta;
-    private javax.swing.JTextField jtf_producto;
+    public javax.swing.JTable jtb_tabla;
+    public javax.swing.JTextField jtf_descripcion;
+    public javax.swing.JTextField jtf_existencias;
+    public javax.swing.JTextField jtf_id_productos;
+    public javax.swing.JTextField jtf_precio_compra;
+    public javax.swing.JTextField jtf_precio_venta;
+    public javax.swing.JTextField jtf_producto;
     // End of variables declaration//GEN-END:variables
 }

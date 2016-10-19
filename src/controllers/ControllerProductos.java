@@ -1,51 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controllers;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import views.View_productos;
+import models.ModelProductos;
 /**
  *
  * @author MATRIX
  */
-public class ControllerProductos {
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import views.Viewproductos;
-import models.ModelProductos;
+
+
 
 public class ControllerProductos implements ActionListener {
     
-    private final Viewproductos viewProductos;
+    private final View_productos view_productos;
     private final ModelProductos modelProductos;
     
     
-    public ControllerContacts(ViewProductos viewProductos, ModelProductos modelProductos){
-        this.viewProductos = viewProductos;
+    public ControllerProductos(View_productos view_productos, ModelProductos modelProductos){
+        this.view_productos = view_productos;
         this.modelProductos= modelProductos;
         
-        this.viewProductos.jbtnFirst.addActionListener(this);
-        this.viewProductos.jbtnPrevious.addActionListener(this);
-        this.viewProductos.jbtnNext.addActionListener(this);
-        this.viewProductos.jbtnLast.addActionListener(this);
+        this.view_productos.jbtnFirst.addActionListener(this);
+        this.view_productos.jbtnPrevious.addActionListener(this);
+        this.view_productos.jbtnNext.addActionListener(this);
+        this.view_productos.jbtnLast.addActionListener(this);
         
         initView();
     }
             
     private void initView(){
         modelProductos.initValues();
-        getValues();
+        showValues();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       if(e.getSource()==viewProductos.jbtnFirst)
+       if(e.getSource()==view_productos.jbtnFirst)
            jbtnFirstActionPerformed();
-       else if(e.getSource()==viewProductos.jbtnPrevious)
+       else if(e.getSource()==view_productos.jbtnPrevious)
            jbtnPreviousActionPerformed();
-       else if(e.getSource()==viewProductos.jbtnNext)
+       else if(e.getSource()==view_productos.jbtnNext)
            jbtnNextActionPerformed();
-       else if(e.getSource()==viewProductos.jbtnLast)
+       else if(e.getSource()==view_productos.jbtnLast)
            jbtnLastActionPerformed();
     }
     
@@ -55,7 +52,7 @@ public class ControllerProductos implements ActionListener {
     }
     
     private void jbtnPreviousActionPerformed(){
-        modelProductos.movePreviousActionPerformed();
+        modelProductos.movePrevious();
         showValues();
     }
     
@@ -70,12 +67,12 @@ public class ControllerProductos implements ActionListener {
     }
     
     private void showValues(){
-        viewProductos.jtfId_producto.setText(""+modelProductos.getId_producto());
-        viewProductos.jtfProducto.setText(modelProductos.getProducto());
-        viewProductos.jtfDescripcion.setText(modelProductos.getDescripcion());
-        viewProductos.jtfPrecio_compra.setText(modelProductos.getPrecio_compra());
-        viewProductos.jtfPrecio_venta.setText(modelProductos.getPrecio_venta());
+        view_productos.jtf_id_productos.setText(""+modelProductos.getId_producto());
+        view_productos.jtf_producto.setText(modelProductos.getProducto());
+        view_productos.jtf_descripcion.setText(modelProductos.getDescripcion());
+        view_productos.jtf_precio_compra.setText(modelProductos.getPrecio_compra());
+        view_productos.jtf_precio_venta.setText(modelProductos.getPrecio_venta());
     }
 }
     
-}
+

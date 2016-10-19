@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package views;
 
 /**
@@ -30,6 +26,8 @@ public class ViewMain extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmiClientes = new javax.swing.JMenuItem();
+        jmiProductos = new javax.swing.JMenuItem();
+        jmiProveedores = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,6 +35,12 @@ public class ViewMain extends javax.swing.JFrame {
 
         jmiClientes.setText("Clientes");
         jMenu1.add(jmiClientes);
+
+        jmiProductos.setText("Productos");
+        jMenu1.add(jmiProductos);
+
+        jmiProveedores.setText("Proveedores");
+        jMenu1.add(jmiProveedores);
 
         jMenuBar1.add(jMenu1);
 
@@ -83,6 +87,8 @@ public class ViewMain extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -96,5 +102,7 @@ public class ViewMain extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JMenuItem jmiClientes;
+    public javax.swing.JMenuItem jmiProductos;
+    public javax.swing.JMenuItem jmiProveedores;
     // End of variables declaration//GEN-END:variables
 }
