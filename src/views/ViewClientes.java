@@ -242,6 +242,11 @@ public class ViewClientes extends javax.swing.JPanel {
         );
 
         jbtn_agregar.setText("Agregar");
+        jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_agregarActionPerformed(evt);
+            }
+        });
 
         jbtn_editar.setText("Editar");
         jbtn_editar.addActionListener(new java.awt.event.ActionListener() {
@@ -347,6 +352,10 @@ public class ViewClientes extends javax.swing.JPanel {
     private void jbtn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_editarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_editarActionPerformed
+
+    private void jbtn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_agregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtn_agregarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
