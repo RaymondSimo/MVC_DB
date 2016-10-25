@@ -39,132 +39,140 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane2" min="-2" pref="542" max="-2" attributes="0"/>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="jbtnFirst" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jbtnPrevious" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jbtnNext" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jbtnLast" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="78" pref="306" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jl_descripcion" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jl_marca" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jtf_marca" pref="102" max="32767" attributes="0"/>
+                                  <Component id="jtf_descripcion" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jl_id_producto" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jl_producto" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jtf_producto" max="32767" attributes="0"/>
+                                  <Component id="jtf_id_productos" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="jbtnFirst" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jbtnPrevious" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jbtnNext" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jbtnLast" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                              <Component id="jl_precio_compra" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jl_id_producto" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jtf_id_productos" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jl_producto" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jtf_producto" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jl_descripcion" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jtf_descripcion" min="-2" pref="123" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                      <Component id="jl_precio_compra" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jl_existencias" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_precio_venta" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtf_precio_compra" pref="84" max="32767" attributes="0"/>
-                                  <Component id="jtf_precio_venta" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtf_existencias" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jl_existencias" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jl_precio_venta" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jl_modelo" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jbtn_agregar" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jbtn_buscar" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jbtn_editar" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jbtn_eliminar" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jtf_precio_compra" pref="84" max="32767" attributes="0"/>
+                          <Component id="jtf_precio_venta" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jtf_existencias" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jtf_modelo" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jbtn_buscar" max="32767" attributes="0"/>
+                          <Component id="jbtn_editar" max="32767" attributes="0"/>
+                          <Component id="jbtn_eliminar" max="32767" attributes="0"/>
+                          <Component id="jbtn_agregar" alignment="1" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="540" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jl_id_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jl_precio_compra" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtf_id_productos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtf_precio_compra" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbtn_agregar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jl_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jl_precio_venta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtf_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtf_precio_venta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbtn_eliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jl_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jl_existencias" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_existencias" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbtn_editar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jbtn_buscar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jl_id_producto" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jl_precio_compra" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtf_id_productos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtf_precio_compra" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtf_marca" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jl_marca" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jl_modelo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtf_modelo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jl_producto" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jl_precio_venta" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtf_producto" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtf_precio_venta" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jl_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jl_existencias" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_existencias" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jbtnFirst" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jbtnPrevious" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jbtnNext" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jbtnLast" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jbtn_agregar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbtn_eliminar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbtn_editar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbtn_buscar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <Component id="jScrollPane2" min="-2" pref="201" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="80" max="-2" attributes="0"/>
+              <EmptySpace pref="125" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -284,17 +292,29 @@
         <Component class="javax.swing.JTable" name="jtb_tabla">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="6" rowCount="4">
-                <Column editable="true" title="id" type="java.lang.Object"/>
+              <Table columnCount="8" rowCount="0">
+                <Column editable="true" title="id_producto" type="java.lang.Object"/>
                 <Column editable="true" title="producto" type="java.lang.Object"/>
                 <Column editable="true" title="descripcion" type="java.lang.Object"/>
                 <Column editable="true" title="pre_compra" type="java.lang.Object"/>
                 <Column editable="true" title="pre_venta" type="java.lang.Object"/>
-                <Column editable="true" title="existencias" type="java.lang.Object"/>
+                <Column editable="true" title="Existencias" type="java.lang.Object"/>
+                <Column editable="true" title="Marca" type="java.lang.Object"/>
+                <Column editable="true" title="Modelo" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -371,6 +391,26 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jl_marca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Marca"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtf_marca">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jl_modelo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modelo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtf_modelo">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>

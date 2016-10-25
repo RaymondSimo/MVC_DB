@@ -15,6 +15,9 @@ public class ModelProductos {
     private String precio_compra;
     private String precio_venta;
     private String existencias;
+    private String marca;
+    private String modelo;
+    
     
     public void moveNext(){
         getConection().moveNext();
@@ -37,7 +40,7 @@ public class ModelProductos {
     }
     
     public void initValues(){
-        getConection().executeQuery("SELECT id_producto, producto, descripcion,precio_compra,precio_venta,existencias FROM productos;");
+        getConection().executeQuery("SELECT id_producto, producto, descripcion,precio_compra,precio_venta,existencias,marca,modelo FROM productos;");
         getConection().moveNext();
         setValues();
     }
@@ -48,7 +51,8 @@ public class ModelProductos {
         this.setPrecio_compra(getConection().getString("precio_compra"));
         this.setPrecio_venta(getConection().getString("precio_venta"));
         this.setExistencias(getConection().getString("existencias"));
-                
+        this.setMarca(getConection().getString("marca"));
+        this.setMarca(getConection().getString("modelo"));
     }
 
     /**
@@ -147,6 +151,34 @@ public class ModelProductos {
      */
     public void setExistencias(String existencias) {
         this.existencias = existencias;
+    }
+
+    /**
+     * @return the marca
+     */
+    public String getMarca() {
+        return marca;
+    }
+
+    /**
+     * @param marca the marca to set
+     */
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    /**
+     * @return the modelo
+     */
+    public String getModelo() {
+        return modelo;
+    }
+
+    /**
+     * @param modelo the modelo to set
+     */
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 }
     

@@ -72,6 +72,9 @@ public class ControllerProductos implements ActionListener {
         view_productos.jtf_descripcion.setText(modelProductos.getDescripcion());
         view_productos.jtf_precio_compra.setText(modelProductos.getPrecio_compra());
         view_productos.jtf_precio_venta.setText(modelProductos.getPrecio_venta());
+        view_productos.jtf_existencias.setText(modelProductos.getExistencias());
+        view_productos.jtf_marca.setText(modelProductos.getMarca());
+        view_productos.jtf_modelo.setText(modelProductos.getModelo());
     }
 }
     

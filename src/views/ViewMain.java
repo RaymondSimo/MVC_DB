@@ -35,6 +35,11 @@ public class ViewMain extends javax.swing.JFrame {
         jmiCompras = new javax.swing.JMenuItem();
         jmiVentas = new javax.swing.JMenuItem();
         jm_reportes = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         jm_acerca = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,6 +78,27 @@ public class ViewMain extends javax.swing.JFrame {
         jm_bar.add(jm_operciones);
 
         jm_reportes.setText("Reportes");
+
+        jMenuItem1.setText("Clientes");
+        jm_reportes.add(jMenuItem1);
+
+        jMenuItem2.setText("Productos");
+        jm_reportes.add(jMenuItem2);
+
+        jMenuItem3.setText("Proveedores");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jm_reportes.add(jMenuItem3);
+
+        jMenuItem4.setText("Compras");
+        jm_reportes.add(jMenuItem4);
+
+        jMenuItem5.setText("Ventas");
+        jm_reportes.add(jMenuItem5);
+
         jm_bar.add(jm_reportes);
 
         jm_acerca.setText("A cerca de");
@@ -93,6 +119,10 @@ public class ViewMain extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,6 +167,11 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     public javax.swing.JMenu jm_acerca;
     public javax.swing.JMenu jm_archivos;
     public javax.swing.JMenuBar jm_bar;
