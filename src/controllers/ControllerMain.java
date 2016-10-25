@@ -27,8 +27,8 @@ public class ControllerMain implements ActionListener{
         
         
         this.viewMain.jmiClientes.addActionListener(this);
-        this.viewMain.jmiProductos.addActionListener(this);
-        this.viewMain.jmiProveedores.addActionListener(this);
+        this.viewMain.jmi_iniciar_sesion.addActionListener(this);
+        this.viewMain.jmiUsuarios.addActionListener(this);
         initView();
     }
 

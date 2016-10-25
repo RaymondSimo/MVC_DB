@@ -1,6 +1,8 @@
 
 package models;
+import javax.swing.table.DefaultTableModel;
 import sax.DBConnection;
+import views.ViewClientes;
 /**
  *
  * @author Raymond SIMOLY
@@ -21,7 +23,10 @@ public class ModelClientes {
     private String colonia;
     private String ciudad;
     private String estado;
+ViewClientes viewClientes = new ViewClientes();
 
+    
+  public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_cliente", "nombre","ap_paterno","ap_materno","telefono","email","rfc","calle","numero","colonia","ciudad","estado"}, 0);
     /**
      * @return the id_cliente
      */
@@ -183,6 +188,8 @@ public class ModelClientes {
         conection.moveLast();
         setValues();
     }
+     
+   
     
     public void initValues(){
         conection.executeQuery("SELECT id_cliente, nombre, ap_paterno, ap_materno, telefono, email, rfc, calle, numero, colonia, ciudad, estado FROM clientes;");
@@ -205,7 +212,29 @@ public class ModelClientes {
         
                 
     }
+    public void Tabla() {
+        while (conection.moveNext()) {
+            setValues();
+               tableModel.addRow(new Object []{id_cliente, nombre,ap_paterno,ap_materno,telefono,email,rfc,calle,numero,colonia,ciudad,estado});
+        }
+    }
+    public void eliminarValues()
+    {
+        conection.executeUpdate ("delete from clientes where id_cliente="+id_cliente);
 
+           this.viewClientes.jtf_nombre.setText("");
+             this.viewClientes.jtf_ap_materno.setText(""); 
+             this.viewClientes.jtf_ap_paternno.getText();
+             this.viewClientes.jtf_telefono.setText("");
+             this.viewClientes.jtf_email.setText("");
+             this.viewClientes.jtf_rfc.setText("");
+             this.viewClientes.jtf_calle.setText("");
+             this.viewClientes.jtf_numero.setText("");
+             this.viewClientes.jtf_colonia.setText("");
+             this.viewClientes.jtf_ciudad.setText("");
+             this.viewClientes.jtf_estado.setText("");
+             initValues();
+    }
     /**
      * @return the ap_paterno
      */

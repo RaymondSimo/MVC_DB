@@ -23,34 +23,68 @@ public class ViewMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jm_bar = new javax.swing.JMenuBar();
+        jm_archivos = new javax.swing.JMenu();
+        jmi_iniciar_sesion = new javax.swing.JMenuItem();
+        jmiUsuarios = new javax.swing.JMenuItem();
+        jm_catalogos = new javax.swing.JMenu();
         jmiClientes = new javax.swing.JMenuItem();
         jmiProductos = new javax.swing.JMenuItem();
         jmiProveedores = new javax.swing.JMenuItem();
+        jm_operciones = new javax.swing.JMenu();
+        jmiCompras = new javax.swing.JMenuItem();
+        jmiVentas = new javax.swing.JMenuItem();
+        jm_reportes = new javax.swing.JMenu();
+        jm_acerca = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Archivos");
+        jm_archivos.setText("Archivos");
+
+        jmi_iniciar_sesion.setText("Iniciar sesion");
+        jm_archivos.add(jmi_iniciar_sesion);
+
+        jmiUsuarios.setText("Usuarios");
+        jm_archivos.add(jmiUsuarios);
+
+        jm_bar.add(jm_archivos);
+
+        jm_catalogos.setText("Catalogos");
 
         jmiClientes.setText("Clientes");
-        jMenu1.add(jmiClientes);
+        jm_catalogos.add(jmiClientes);
 
         jmiProductos.setText("Productos");
-        jMenu1.add(jmiProductos);
+        jm_catalogos.add(jmiProductos);
 
         jmiProveedores.setText("Proveedores");
-        jMenu1.add(jmiProveedores);
+        jm_catalogos.add(jmiProveedores);
 
-        jMenuBar1.add(jMenu1);
+        jm_bar.add(jm_catalogos);
 
-        setJMenuBar(jMenuBar1);
+        jm_operciones.setText("Operacioes");
+
+        jmiCompras.setText("Compras");
+        jm_operciones.add(jmiCompras);
+
+        jmiVentas.setText("Ventas");
+        jm_operciones.add(jmiVentas);
+
+        jm_bar.add(jm_operciones);
+
+        jm_reportes.setText("Reportes");
+        jm_bar.add(jm_reportes);
+
+        jm_acerca.setText("A cerca de");
+        jm_bar.add(jm_acerca);
+
+        setJMenuBar(jm_bar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 615, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,6 +123,10 @@ public class ViewMain extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -99,10 +137,18 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenu jm_acerca;
+    public javax.swing.JMenu jm_archivos;
+    public javax.swing.JMenuBar jm_bar;
+    public javax.swing.JMenu jm_catalogos;
+    public javax.swing.JMenu jm_operciones;
+    public javax.swing.JMenu jm_reportes;
     public javax.swing.JMenuItem jmiClientes;
+    public javax.swing.JMenuItem jmiCompras;
     public javax.swing.JMenuItem jmiProductos;
     public javax.swing.JMenuItem jmiProveedores;
+    public javax.swing.JMenuItem jmiUsuarios;
+    public javax.swing.JMenuItem jmiVentas;
+    public javax.swing.JMenuItem jmi_iniciar_sesion;
     // End of variables declaration//GEN-END:variables
 }
