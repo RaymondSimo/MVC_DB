@@ -14,10 +14,10 @@ public class ControllerMain implements ActionListener{
     private final ModelMain modelMain;
     private final ViewClientes viewClientes;
      private final View_productos view_productos;
-     private final view_provedores view_provedores;
+     private final View_provedores view_provedores;
     
     
-    public ControllerMain(ViewMain viewMain, ViewClientes viewClientes, view_provedores view_provedores, View_productos view_productos, ModelMain modelMain){
+    public ControllerMain(ViewMain viewMain, ViewClientes viewClientes, View_provedores view_provedores, View_productos view_productos, ModelMain modelMain){
         this.viewMain=viewMain;
         this.viewClientes=viewClientes;
         this.modelMain=modelMain;

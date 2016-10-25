@@ -14,7 +14,7 @@ ViewClientes viewClientes = new ViewClientes();
         ModelClientes modelClientes = new ModelClientes();
         ControllerClientes controllerClientes = new ControllerClientes(viewClientes, modelClientes);
         
-        view_provedores view_provedores=new view_provedores();
+        View_provedores view_provedores=new View_provedores();
         ModelProvedores modelProvedores = new ModelProvedores();
         //ControllerProvedores controllerProvedores= new ControllerProvedores(view_provedores, modelProvedores);
         
