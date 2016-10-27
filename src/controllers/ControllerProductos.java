@@ -76,11 +76,11 @@ public class ControllerProductos implements ActionListener {
      public void agregarRegistro(){
         this.view_productos.jtf_id_productos.setText("");
         this.view_productos.jtf_producto.setText("");
-         this.view_productos.jtf_descripcion.setText("");
+        this.view_productos.jtf_descripcion.setText("");
         this.view_productos.jtf_precio_compra.setText("");
-         this.view_productos.jtf_precio_venta.setText("");
+        this.view_productos.jtf_precio_venta.setText("");
         this.view_productos.jtf_existencias.setText("");
-         this.view_productos.jtf_marca.setText("");
+        this.view_productos.jtf_marca.setText("");
         this.view_productos.jtf_modelo.setText("");
            
     }

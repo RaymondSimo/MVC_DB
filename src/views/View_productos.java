@@ -62,6 +62,7 @@ public class View_productos extends javax.swing.JPanel {
         jScrollPane6 = new javax.swing.JScrollPane();
         J_tabla = new javax.swing.JTable();
         jbtn_guardar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -115,23 +116,55 @@ public class View_productos extends javax.swing.JPanel {
         ));
         jScrollPane5.setViewportView(jTable4);
 
+        setLayout(null);
+
+        jl_id_producto.setForeground(new java.awt.Color(153, 0, 0));
         jl_id_producto.setText("id_productos");
+        add(jl_id_producto);
+        jl_id_producto.setBounds(10, 62, 62, 14);
 
+        jl_producto.setForeground(new java.awt.Color(153, 0, 0));
         jl_producto.setText("producto");
+        add(jl_producto);
+        jl_producto.setBounds(10, 100, 43, 14);
 
+        jl_descripcion.setForeground(new java.awt.Color(153, 0, 0));
         jl_descripcion.setText("descripcion");
+        add(jl_descripcion);
+        jl_descripcion.setBounds(10, 138, 53, 14);
 
+        jl_precio_compra.setForeground(new java.awt.Color(153, 0, 0));
         jl_precio_compra.setText("precio_compra");
+        add(jl_precio_compra);
+        jl_precio_compra.setBounds(223, 62, 70, 14);
 
+        jl_precio_venta.setForeground(new java.awt.Color(153, 0, 0));
         jl_precio_venta.setText("precio_venta");
+        add(jl_precio_venta);
+        jl_precio_venta.setBounds(219, 100, 63, 14);
 
+        jl_existencias.setForeground(new java.awt.Color(153, 0, 0));
         jl_existencias.setText("existencias");
+        add(jl_existencias);
+        jl_existencias.setBounds(219, 138, 53, 14);
+        add(jtf_id_productos);
+        jtf_id_productos.setBounds(84, 59, 102, 20);
+        add(jtf_producto);
+        jtf_producto.setBounds(84, 97, 102, 20);
+        add(jtf_descripcion);
+        jtf_descripcion.setBounds(84, 135, 102, 20);
 
         jtf_precio_compra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_precio_compraActionPerformed(evt);
             }
         });
+        add(jtf_precio_compra);
+        jtf_precio_compra.setBounds(311, 59, 84, 20);
+        add(jtf_precio_venta);
+        jtf_precio_venta.setBounds(311, 97, 84, 20);
+        add(jtf_existencias);
+        jtf_existencias.setBounds(311, 135, 84, 20);
 
         jbtnFirst.setText("l<");
         jbtnFirst.addActionListener(new java.awt.event.ActionListener() {
@@ -139,8 +172,12 @@ public class View_productos extends javax.swing.JPanel {
                 jbtnFirstActionPerformed(evt);
             }
         });
+        add(jbtnFirst);
+        jbtnFirst.setBounds(97, 208, 43, 23);
 
         jbtnPrevious.setText("<");
+        add(jbtnPrevious);
+        jbtnPrevious.setBounds(146, 208, 41, 23);
 
         jbtnNext.setText(">");
         jbtnNext.addActionListener(new java.awt.event.ActionListener() {
@@ -148,6 +185,8 @@ public class View_productos extends javax.swing.JPanel {
                 jbtnNextActionPerformed(evt);
             }
         });
+        add(jbtnNext);
+        jbtnNext.setBounds(205, 208, 41, 23);
 
         jbtnLast.setText(">l");
         jbtnLast.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +194,8 @@ public class View_productos extends javax.swing.JPanel {
                 jbtnLastActionPerformed(evt);
             }
         });
+        add(jbtnLast);
+        jbtnLast.setBounds(256, 208, 43, 23);
 
         jbtn_agregar.setText("Agregar");
         jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -162,8 +203,12 @@ public class View_productos extends javax.swing.JPanel {
                 jbtn_agregarActionPerformed(evt);
             }
         });
+        add(jbtn_agregar);
+        jbtn_agregar.setBounds(426, 37, 93, 23);
 
         jbtn_eliminar.setText("Eliminar");
+        add(jbtn_eliminar);
+        jbtn_eliminar.setBounds(426, 66, 93, 23);
 
         jbtn_editar.setText("Editar");
         jbtn_editar.addActionListener(new java.awt.event.ActionListener() {
@@ -171,12 +216,26 @@ public class View_productos extends javax.swing.JPanel {
                 jbtn_editarActionPerformed(evt);
             }
         });
+        add(jbtn_editar);
+        jbtn_editar.setBounds(426, 100, 93, 23);
 
         jbtn_buscar.setText("Buscar");
+        add(jbtn_buscar);
+        jbtn_buscar.setBounds(426, 163, 93, 23);
 
+        jl_marca.setForeground(new java.awt.Color(153, 0, 0));
         jl_marca.setText("Marca");
+        add(jl_marca);
+        jl_marca.setBounds(10, 185, 29, 14);
+        add(jtf_marca);
+        jtf_marca.setBounds(84, 182, 102, 20);
 
+        jl_modelo.setForeground(new java.awt.Color(153, 0, 0));
         jl_modelo.setText("Modelo");
+        add(jl_modelo);
+        jl_modelo.setBounds(219, 176, 34, 14);
+        add(jtf_modelo);
+        jtf_modelo.setBounds(311, 173, 84, 20);
 
         J_tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -191,132 +250,23 @@ public class View_productos extends javax.swing.JPanel {
         ));
         jScrollPane6.setViewportView(J_tabla);
 
+        add(jScrollPane6);
+        jScrollPane6.setBounds(20, 260, 703, 90);
+
         jbtn_guardar.setText("Guardar");
         jbtn_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtn_guardarActionPerformed(evt);
             }
         });
+        add(jbtn_guardar);
+        jbtn_guardar.setBounds(426, 129, 93, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jl_id_producto)
-                                    .addComponent(jl_producto))
-                                .addGap(12, 12, 12)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtf_id_productos)
-                                    .addComponent(jtf_producto)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jl_descripcion, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jl_marca))
-                                .addGap(21, 21, 21)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtf_marca)
-                                    .addComponent(jtf_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jl_precio_compra))
-                            .addComponent(jl_existencias)
-                            .addComponent(jl_precio_venta)
-                            .addComponent(jl_modelo))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_precio_compra)
-                            .addComponent(jtf_precio_venta)
-                            .addComponent(jtf_existencias)
-                            .addComponent(jtf_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jbtn_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbtn_guardar, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                            .addComponent(jbtn_editar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbtn_eliminar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbtn_agregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jbtnFirst)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnPrevious)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtnNext)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbtnLast))
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 397, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jbtn_agregar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtn_eliminar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbtn_editar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtn_guardar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbtn_buscar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_id_producto)
-                                    .addComponent(jtf_id_productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_producto)
-                                    .addComponent(jtf_producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_descripcion)
-                                    .addComponent(jtf_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(123, 123, 123)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtf_marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jl_marca)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_precio_compra)
-                                    .addComponent(jtf_precio_compra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_precio_venta)
-                                    .addComponent(jtf_precio_venta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_existencias)
-                                    .addComponent(jtf_existencias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jl_modelo)
-                                    .addComponent(jtf_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtnFirst)
-                    .addComponent(jbtnPrevious)
-                    .addComponent(jbtnNext)
-                    .addComponent(jbtnLast))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/maxresdefault.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        add(jLabel2);
+        jLabel2.setBounds(0, 0, 750, 550);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtf_precio_compraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_precio_compraActionPerformed
@@ -349,16 +299,17 @@ public class View_productos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable J_tabla;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
+    public javax.swing.JTable J_tabla;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane3;
+    public javax.swing.JScrollPane jScrollPane4;
+    public javax.swing.JScrollPane jScrollPane5;
+    public javax.swing.JScrollPane jScrollPane6;
+    public javax.swing.JTable jTable1;
+    public javax.swing.JTable jTable2;
+    public javax.swing.JTable jTable3;
+    public javax.swing.JTable jTable4;
     public javax.swing.JButton jbtnFirst;
     public javax.swing.JButton jbtnLast;
     public javax.swing.JButton jbtnNext;
@@ -367,15 +318,15 @@ public class View_productos extends javax.swing.JPanel {
     public javax.swing.JButton jbtn_buscar;
     public javax.swing.JButton jbtn_editar;
     public javax.swing.JButton jbtn_eliminar;
-    private javax.swing.JButton jbtn_guardar;
-    private javax.swing.JLabel jl_descripcion;
-    private javax.swing.JLabel jl_existencias;
-    private javax.swing.JLabel jl_id_producto;
-    private javax.swing.JLabel jl_marca;
-    private javax.swing.JLabel jl_modelo;
-    private javax.swing.JLabel jl_precio_compra;
-    private javax.swing.JLabel jl_precio_venta;
-    private javax.swing.JLabel jl_producto;
+    public javax.swing.JButton jbtn_guardar;
+    public javax.swing.JLabel jl_descripcion;
+    public javax.swing.JLabel jl_existencias;
+    public javax.swing.JLabel jl_id_producto;
+    public javax.swing.JLabel jl_marca;
+    public javax.swing.JLabel jl_modelo;
+    public javax.swing.JLabel jl_precio_compra;
+    public javax.swing.JLabel jl_precio_venta;
+    public javax.swing.JLabel jl_producto;
     public javax.swing.JTextField jtf_descripcion;
     public javax.swing.JTextField jtf_existencias;
     public javax.swing.JTextField jtf_id_productos;
