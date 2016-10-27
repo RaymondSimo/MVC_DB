@@ -37,6 +37,8 @@ public class ControllerMain implements ActionListener{
         initView();
     }
 
+    
+
       
     
 
@@ -80,4 +82,6 @@ public class ControllerMain implements ActionListener{
         viewMain.setLocationRelativeTo(null);
         viewMain.setVisible(true);
     }
+
+    
 }
