@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import views.View_productos;
 import models.ModelProductos;
+import sax.DBConnection;
 /**
  *
  * @author MATRIX
@@ -15,6 +16,7 @@ public class ControllerProductos implements ActionListener {
     
     private final View_productos view_productos;
     private final ModelProductos modelProductos;
+    private DBConnection conection = new DBConnection(3306,"localhost", "acme_shop", "root", "1234");
     
     
     public ControllerProductos(View_productos view_productos, ModelProductos modelProductos){
@@ -46,8 +48,10 @@ public class ControllerProductos implements ActionListener {
            jbtnLastActionPerformed();
        else if(e.getSource()==view_productos.jbtn_agregar)
          agregarRegistro(); 
-        else if(e.getSource()==view_productos.jbtn_eliminar)
-            jbtnEliminarActionPerformed();
+        else if(e.getSource()==view_productos.jbtn_eliminar){
+            
+        }
+            
         
         else if(e.getSource()==view_productos.jbtn_editar)
           editarValues();   
@@ -85,15 +89,14 @@ public class ControllerProductos implements ActionListener {
            
     }
      public void guadarRegistro() {        
-       
-             String nombre=this.view_productos.jtf_id_productos.getText();
-             String ap_paterno=this.view_productos.jtf_producto.getText(); 
-             String ap_materno=this.view_productos.jtf_descripcion.getText();
-             Integer telefono=Integer.parseInt(view_productos.jtf_precio_compra.getText());
-             String email=this.view_productos.jtf_precio_venta.getText();
-             String rfc=this.view_productos.jtf_existencias.getText();
-             String calle=this.view_productos.jtf_marca.getText();
-              Integer numero=Integer.parseInt(view_productos.jtf_modelo.getText());
+             Integer id_producto=Integer.parseInt(view_productos.jtf_id_productos.getText());
+             String producto=this.view_productos.jtf_id_productos.getText();
+             String descripcion=this.view_productos.jtf_producto.getText(); 
+             Integer precio_compra=Integer.parseInt(view_productos.jl_precio_compra.getText());
+             Integer precio_venta=Integer.parseInt(view_productos.jl_precio_venta.getText());
+             Integer existencias=Integer.parseInt(view_productos.jl_existencias.getText());
+             String marca=this.view_productos.jtf_marca.getText();
+             String modelo=this.view_productos.jtf_modelo.getText();
        
              
 
@@ -106,8 +109,7 @@ public class ControllerProductos implements ActionListener {
 
     }
      private void showData() {
-        view_productos.J_tabla.setModel(modelProductos.tableModel);
-        modelProductos.Tabla();
+       
     }
      public void editarValues(){
          Integer id_productos=Integer.parseInt(view_productos.jtf_id_productos.getText());

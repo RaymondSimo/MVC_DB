@@ -27,6 +27,7 @@ ViewClientes viewClientes = new ViewClientes();
 
     
   public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_cliente", "nombre","ap_paterno","ap_materno","telefono","email","rfc","calle","numero","colonia","ciudad","estado"}, 0);
+  
     /**
      * @return the id_cliente
      */
