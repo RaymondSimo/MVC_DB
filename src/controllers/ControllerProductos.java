@@ -44,6 +44,14 @@ public class ControllerProductos implements ActionListener {
            jbtnNextActionPerformed();
        else if(e.getSource()==view_productos.jbtnLast)
            jbtnLastActionPerformed();
+       else if(e.getSource()==view_productos.jbtn_agregar)
+         agregarRegistro(); 
+        else if(e.getSource()==view_productos.jbtn_eliminar)
+            jbtnEliminarActionPerformed();
+        
+        else if(e.getSource()==view_productos.jbtn_editar)
+          editarValues();   
+        
     }
     
     private void jbtnFirstActionPerformed(){
@@ -65,6 +73,58 @@ public class ControllerProductos implements ActionListener {
         modelProductos.moveLast();
         showValues();
     }
+     public void agregarRegistro(){
+        this.view_productos.jtf_id_productos.setText("");
+        this.view_productos.jtf_producto.setText("");
+         this.view_productos.jtf_descripcion.setText("");
+        this.view_productos.jtf_precio_compra.setText("");
+         this.view_productos.jtf_precio_venta.setText("");
+        this.view_productos.jtf_existencias.setText("");
+         this.view_productos.jtf_marca.setText("");
+        this.view_productos.jtf_modelo.setText("");
+           
+    }
+     public void guadarRegistro() {        
+       
+             String nombre=this.view_productos.jtf_id_productos.getText();
+             String ap_paterno=this.view_productos.jtf_producto.getText(); 
+             String ap_materno=this.view_productos.jtf_descripcion.getText();
+             Integer telefono=Integer.parseInt(view_productos.jtf_precio_compra.getText());
+             String email=this.view_productos.jtf_precio_venta.getText();
+             String rfc=this.view_productos.jtf_existencias.getText();
+             String calle=this.view_productos.jtf_marca.getText();
+              Integer numero=Integer.parseInt(view_productos.jtf_modelo.getText());
+       
+             
+
+            conection.executeUpdate("insert into productos(id_producto, producto, descripcion,precio_compra,precio_venta,existencias,marca,modelo)"+" values "
+                    + "('"+ id_producto+"','"+producto+"','"+descripcion+"','"+precio_compra+"','"+precio_venta+"','"+existencias+"','"+marca+"','"+modelo+"');"); 
+            
+           this.modelProductos.setValues();
+           //showValues();
+       
+
+    }
+     private void showData() {
+        view_productos.J_tabla.setModel(modelProductos.tableModel);
+        modelProductos.Tabla();
+    }
+     public void editarValues(){
+         Integer id_productos=Integer.parseInt(view_productos.jtf_id_productos.getText());
+         String productos=this.  view_productos.jtf_producto.getText(); 
+             String descripcion=this.  view_productos.jtf_descripcion.getText();
+             Integer precio_compra=Integer.parseInt(  view_productos.jtf_precio_compra.getText());
+             String precio_venta=this.  view_productos.jtf_precio_venta.getText();
+             String existencias=this.  view_productos.jtf_existencias.getText();
+             String marca=this.  view_productos.jtf_marca.getText();
+             Integer modelo=Integer.parseInt(  view_productos.jtf_modelo.getText());
+             
+             
+             conection.executeUpdate ( "update clientes set id_productos='"+id_productos+"',productos='"+productos+"',desripcion='"+descripcion+"',precio_compra='"+precio_compra+"',precio_venta='"+precio_venta+"',marca='"+marca+"',modelo='"+modelo+"'where id_cliente='"+this.view_productos.jtf_id_productos.getText()+"';");
+       
+       this.modelProductos.setValues();
+
+     }
     
     private void showValues(){
         view_productos.jtf_id_productos.setText(""+modelProductos.getId_producto());
