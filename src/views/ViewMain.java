@@ -43,6 +43,7 @@ public class ViewMain extends javax.swing.JFrame {
         jm_acerca = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setForeground(new java.awt.Color(0, 255, 153));
 
         jm_archivos.setText("Archivos");
 

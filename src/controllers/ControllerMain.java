@@ -5,25 +5,24 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import models.*;
 import views.*;
-/**
- *
- * @author Raymond SIMOLY
- */
+
 public class ControllerMain implements ActionListener{
    private final  ViewMain viewMain;
     private final ModelMain modelMain;
     private final ViewClientes viewClientes;
      private final View_productos view_productos;
      private final View_provedores view_provedores;
+     private final ViewUsuarios viewUsuarios;
+    private final ViewRegist_users viewRegist_users;
     
-    
-    public ControllerMain(ViewMain viewMain, ViewClientes viewClientes, View_provedores view_provedores, View_productos view_productos, ModelMain modelMain){
+    public ControllerMain(ViewMain viewMain, ViewClientes viewClientes, View_provedores view_provedores, View_productos view_productos, ViewUsuarios viewUsuarios, ViewRegist_users viewRegist_users, ModelMain modelMain){
         this.viewMain=viewMain;
         this.viewClientes=viewClientes;
         this.modelMain=modelMain;
         this.view_productos=view_productos;
         this.view_provedores=view_provedores;
-        
+        this.viewUsuarios=viewUsuarios;
+        this.viewRegist_users= viewRegist_users;
         
         
         this.viewMain.jmiClientes.addActionListener(this);
@@ -34,8 +33,12 @@ public class ControllerMain implements ActionListener{
         this.viewMain.jmiCompras.addActionListener(this);
         this.viewMain.jmiVentas.addActionListener(this);
         
+        
+        
         initView();
     }
+
+    
 
     
 
@@ -59,6 +62,12 @@ public class ControllerMain implements ActionListener{
         else if(ae.getSource()==viewMain.jmiProveedores){
             jmiProveedoresActionPerformed();
         }
+        else if(ae.getSource()==viewMain.jmi_iniciar_sesion){
+            jmi_iniciar_sesionActionPerformed();
+        }
+        else if(ae.getSource()==viewMain.jmiUsuarios){
+            jmiUsuariosActionPerformed();
+        }
     }
     
     public void jmiClientessActionPerformed(){
@@ -73,6 +82,16 @@ public class ControllerMain implements ActionListener{
     }
     public void jmiProveedoresActionPerformed(){
         viewMain.setContentPane(view_provedores);
+        viewMain.revalidate();
+        viewMain.repaint();
+    }
+    public void jmi_iniciar_sesionActionPerformed(){
+        viewMain.setContentPane(viewUsuarios);
+        viewMain.revalidate();
+        viewMain.repaint();
+    }
+    public void jmiUsuariosActionPerformed(){
+        viewMain.setContentPane(viewRegist_users);
         viewMain.revalidate();
         viewMain.repaint();
     }

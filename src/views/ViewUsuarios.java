@@ -31,7 +31,7 @@ public class ViewUsuarios extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jtf_contrasena = new javax.swing.JLabel();
         jtf_usuario = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jtf_password = new javax.swing.JPasswordField();
         jbtn_enter = new javax.swing.JButton();
 
         jTextField2.setText("jTextField2");
@@ -56,7 +56,7 @@ public class ViewUsuarios extends javax.swing.JPanel {
                     .addComponent(jbtn_enter)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jtf_usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                        .addComponent(jPasswordField1)))
+                        .addComponent(jtf_password)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -69,7 +69,7 @@ public class ViewUsuarios extends javax.swing.JPanel {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jtf_contrasena)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtf_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addComponent(jbtn_enter)
                 .addContainerGap(66, Short.MAX_VALUE))
@@ -79,10 +79,10 @@ public class ViewUsuarios extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField2;
     public javax.swing.JButton jbtn_enter;
     private javax.swing.JLabel jtf_contrasena;
+    public javax.swing.JPasswordField jtf_password;
     public javax.swing.JTextField jtf_usuario;
     // End of variables declaration//GEN-END:variables
 }

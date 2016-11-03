@@ -217,7 +217,9 @@ ViewClientes viewClientes = new ViewClientes();
         while (conection.moveNext()) {
             setValues();
                tableModel.addRow(new Object []{id_cliente, nombre,ap_paterno,ap_materno,telefono,email,rfc,calle,numero,colonia,ciudad,estado});
+         
         }
+        
     }
     public void eliminarValues()
     {
