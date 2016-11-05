@@ -1,13 +1,15 @@
-
 package models;
+
 import sax.DBConnection;
+
 /**
  *
  * @author Bnc
  */
 public class ModelProvedores {
-     private DBConnection conection = new DBConnection(3306,"localhost", "acme_shop", "root", "1234");
-     
+
+    public DBConnection conection = new DBConnection(3306, "localhost", "acme_shop", "root", "1234");
+
     private int id_proveedor;
     private String nombre;
     private String rfc;
@@ -173,12 +175,14 @@ public class ModelProvedores {
     public void setEmail(String email) {
         this.email = email;
     }
-     public void initValues(){
-        conection.executeQuery("SELECT id_proveedor, nombre, rfc,calle, numero,colonia,ciudad,estado,nombre_contacto,telefono,email,FROM proveedores;");
+
+    public void initValues() {
+        conection.executeQuery("SELECT id_proveedor, nombre, rfc, calle, numero, colonia, ciudad, estado, nombre_contacto, telefono, email FROM proveedores;");
         conection.moveNext();
         setValues();
     }
-    public void setValues(){
+
+    public void setValues() {
         this.id_proveedor = conection.getInteger("id_proveedor");
         this.nombre = conection.getString("nombre");
         this.rfc = conection.getString("rfc");
@@ -188,50 +192,29 @@ public class ModelProvedores {
         this.ciudad = conection.getString("ciudad");
         this.estado = conection.getString("estado");
         this.telefono = conection.getInteger("telefono");
-        this.email = conection.getString("email");      
+        this.email = conection.getString("email");
         this.nombre_contacto = conection.getString("nombre_contacto");
-        
-     
+
     }
-    public void moveNext(){
+
+    public void moveNext() {
         conection.moveNext();
         setValues();
     }
-    
-    public void movePrevious(){
+
+    public void movePrevious() {
         conection.movePrevious();
         setValues();
     }
-    
-    public void moveFirst(){
+
+    public void moveFirst() {
         conection.moveFirst();
         setValues();
     }
-    
-    public void moveLast(){
+
+    public void moveLast() {
         conection.moveLast();
         setValues();
     }
-   
-        
-                
-    }
 
-   
-
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-
+}

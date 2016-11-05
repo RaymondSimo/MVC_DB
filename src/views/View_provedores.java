@@ -47,7 +47,7 @@ public class View_provedores extends javax.swing.JPanel {
         jl_estado = new javax.swing.JLabel();
         jtf_estado = new javax.swing.JTextField();
         jl_numero_cont = new javax.swing.JLabel();
-        jtf_numero_cont = new javax.swing.JTextField();
+        jtf_nombre_cont = new javax.swing.JTextField();
         jl_Telefono = new javax.swing.JLabel();
         jtf_telefono = new javax.swing.JTextField();
         jtf_email = new javax.swing.JTextField();
@@ -183,7 +183,7 @@ public class View_provedores extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jl_numero_cont)
                         .addGap(18, 18, 18)
-                        .addComponent(jtf_numero_cont)))
+                        .addComponent(jtf_nombre_cont)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(130, 130, 130)
@@ -228,7 +228,7 @@ public class View_provedores extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jtf_numero_cont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_nombre_cont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jl_numero_cont))))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -245,6 +245,7 @@ public class View_provedores extends javax.swing.JPanel {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
+        jTable2.setAutoCreateColumnsFromModel(false);
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null},
@@ -338,7 +339,7 @@ public class View_provedores extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    public javax.swing.JTable jTable2;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_anterior;
     public javax.swing.JButton jbtn_buscar;
@@ -366,8 +367,8 @@ public class View_provedores extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_estado;
     public javax.swing.JTextField jtf_id_proveedor;
     public javax.swing.JTextField jtf_nombre;
+    public javax.swing.JTextField jtf_nombre_cont;
     public javax.swing.JTextField jtf_numero;
-    public javax.swing.JTextField jtf_numero_cont;
     public javax.swing.JTextField jtf_rfc;
     public javax.swing.JTextField jtf_telefono;
     // End of variables declaration//GEN-END:variables
