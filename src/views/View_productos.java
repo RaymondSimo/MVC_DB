@@ -173,11 +173,11 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnFirst);
-        jbtnFirst.setBounds(90, 208, 50, 23);
+        jbtnFirst.setBounds(70, 220, 50, 23);
 
         jbtnPrevious.setText("<");
         add(jbtnPrevious);
-        jbtnPrevious.setBounds(146, 208, 41, 23);
+        jbtnPrevious.setBounds(140, 230, 41, 23);
 
         jbtnNext.setText(">");
         jbtnNext.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +186,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnNext);
-        jbtnNext.setBounds(196, 208, 50, 23);
+        jbtnNext.setBounds(190, 230, 50, 23);
 
         jbtnLast.setText(">l");
         jbtnLast.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +195,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnLast);
-        jbtnLast.setBounds(256, 208, 50, 23);
+        jbtnLast.setBounds(250, 220, 50, 23);
 
         jbtn_agregar.setText("Agregar");
         jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +248,7 @@ public class View_productos extends javax.swing.JPanel {
         jScrollPane6.setViewportView(J_tabla);
 
         add(jScrollPane6);
-        jScrollPane6.setBounds(20, 260, 703, 60);
+        jScrollPane6.setBounds(20, 270, 703, 60);
 
         jbtn_guardar.setText("Guardar");
         jbtn_guardar.addActionListener(new java.awt.event.ActionListener() {
