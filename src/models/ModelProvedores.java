@@ -1,6 +1,8 @@
 package models;
 
+import javax.swing.table.DefaultTableModel;
 import sax.DBConnection;
+import views.View_provedores;
 
 /**
  *
@@ -21,6 +23,8 @@ public class ModelProvedores {
     private String nombre_contacto;
     private int telefono;
     private String email;
+View_provedores view_provedores=new View_provedores();
+  public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_proveedor", "nombre","rfc","calle","numero","colonia","ciudad","estado","nombre_contacto","telefono","email"}, 0);
 
     /**
      * @return the id_provedor
@@ -216,5 +220,31 @@ public class ModelProvedores {
         conection.moveLast();
         setValues();
     }
+    public void Tabla() {
+        while (conection.moveNext()) {
+            setValues();
+               tableModel.addRow(new Object []{id_proveedor, nombre,rfc,calle,numero,colonia,ciudad,estado,nombre_contacto,telefono,email});
+         
+        }
+        
+    }
+    public void eliminarValues()
+    {
+        conection.executeUpdate ("delete from proveedores where id_proveedor="+id_proveedor);
+
+           this.view_provedores.jtf_nombre.setText("");
+             this.view_provedores.jtf_nombre_cont.getText();
+             this.view_provedores.jtf_telefono.setText("");
+             this.view_provedores.jtf_email.setText("");
+             this.view_provedores.jtf_rfc.setText("");
+             this.view_provedores.jtf_calle.setText("");
+             this.view_provedores.jtf_numero.setText("");
+             this.view_provedores.jtf_colonia.setText("");
+             this.view_provedores.jtf_ciudad.setText("");
+             this.view_provedores.jtf_estado.setText("");
+             initValues();
+             
+    }
+    
 
 }

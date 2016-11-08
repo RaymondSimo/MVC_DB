@@ -237,6 +237,7 @@ ViewClientes viewClientes = new ViewClientes();
              this.viewClientes.jtf_ciudad.setText("");
              this.viewClientes.jtf_estado.setText("");
              initValues();
+             
     }
     /**
      * @return the ap_paterno
@@ -264,5 +265,15 @@ ViewClientes viewClientes = new ViewClientes();
      */
     public void setAp_materno(String ap_materno) {
         this.ap_materno = ap_materno;
+    }
+  public  void limpiaTabla(){
+        try{
+            DefaultTableModel temp = (DefaultTableModel) viewClientes.J_tabla.getModel();
+            int a =temp.getRowCount()-1;
+            for(int i=0; i<a; i++)
+                temp.removeRow(i); 
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 }

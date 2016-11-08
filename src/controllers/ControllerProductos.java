@@ -27,8 +27,14 @@ public class ControllerProductos implements ActionListener {
         this.view_productos.jbtnPrevious.addActionListener(this);
         this.view_productos.jbtnNext.addActionListener(this);
         this.view_productos.jbtnLast.addActionListener(this);
+        this.view_productos.jbtn_agregar.addActionListener(this);
+        this.view_productos.jbtn_buscar.addActionListener(this);
+        this.view_productos.jbtn_editar.addActionListener(this);
+        this.view_productos.jbtn_eliminar.addActionListener(this);
+        this.view_productos.jbtn_guardar.addActionListener(this);
         
         initView();
+        showData();
     }
             
     private void initView(){
@@ -49,12 +55,14 @@ public class ControllerProductos implements ActionListener {
        else if(e.getSource()==view_productos.jbtn_agregar)
          agregarRegistro(); 
         else if(e.getSource()==view_productos.jbtn_eliminar){
-            
+         modelProductos.eliminarValues();
         }
-            
-        
-        else if(e.getSource()==view_productos.jbtn_editar)
-          editarValues();   
+        else if(e.getSource()==view_productos.jbtn_editar){
+          editarValues();
+        }
+       else if(e.getSource()==view_productos.jbtn_guardar){
+          guadarRegistro(); 
+       }
         
     }
     
@@ -78,7 +86,6 @@ public class ControllerProductos implements ActionListener {
         showValues();
     }
      public void agregarRegistro(){
-        this.view_productos.jtf_id_productos.setText("");
         this.view_productos.jtf_producto.setText("");
         this.view_productos.jtf_descripcion.setText("");
         this.view_productos.jtf_precio_compra.setText("");
@@ -88,53 +95,58 @@ public class ControllerProductos implements ActionListener {
         this.view_productos.jtf_modelo.setText("");
            
     }
+     private void showData() {
+        view_productos.J_tabla.setModel(modelProductos.tableModel);
+         this.modelProductos.Tabla();
+          this.modelProductos.setValues();
+     }
      public void guadarRegistro() {        
-             Integer id_producto=Integer.parseInt(view_productos.jtf_id_productos.getText());
-             String producto=this.view_productos.jtf_id_productos.getText();
+             
+             String producto=this.view_productos.jtf_id_producto.getText();
              String descripcion=this.view_productos.jtf_producto.getText(); 
-             Integer precio_compra=Integer.parseInt(view_productos.jl_precio_compra.getText());
-             Integer precio_venta=Integer.parseInt(view_productos.jl_precio_venta.getText());
-             Integer existencias=Integer.parseInt(view_productos.jl_existencias.getText());
+             Integer precio_compra=Integer.parseInt(view_productos.jtf_precio_compra.getText());
+             Integer precio_venta=Integer.parseInt(view_productos.jtf_precio_venta.getText());
+             Integer existencias=Integer.parseInt(view_productos.jtf_existencias.getText());
              String marca=this.view_productos.jtf_marca.getText();
              String modelo=this.view_productos.jtf_modelo.getText();
        
              
 
-            conection.executeUpdate("insert into productos(id_producto, producto, descripcion,precio_compra,precio_venta,existencias,marca,modelo)"+" values "
-                    + "('"+ id_producto+"','"+producto+"','"+descripcion+"','"+precio_compra+"','"+precio_venta+"','"+existencias+"','"+marca+"','"+modelo+"');"); 
+            conection.executeUpdate("insert into productos(producto, descripcion,precio_compra,precio_venta,existencias,Marca,Modelo)"+" values "
+                    + "('"+producto+"','"+descripcion+"','"+precio_compra+"','"+precio_venta+"','"+existencias+"','"+marca+"','"+modelo+"');"); 
             
            this.modelProductos.setValues();
-           //showValues();
-       
+           modelProductos.initValues();
+           showValues();
 
     }
-     private void showData() {
-       
-    }
+    
      public void editarValues(){
-         Integer id_productos=Integer.parseInt(view_productos.jtf_id_productos.getText());
-         String productos=this.  view_productos.jtf_producto.getText(); 
-             String descripcion=this.  view_productos.jtf_descripcion.getText();
+         Integer id_producto=Integer.parseInt(view_productos.jtf_id_producto.getText());
+         String producto=this.  view_productos.jtf_producto.getText(); 
+             String descripcion=this.view_productos.jtf_descripcion.getText();
              Integer precio_compra=Integer.parseInt(  view_productos.jtf_precio_compra.getText());
-             String precio_venta=this.  view_productos.jtf_precio_venta.getText();
-             String existencias=this.  view_productos.jtf_existencias.getText();
-             String marca=this.  view_productos.jtf_marca.getText();
-             Integer modelo=Integer.parseInt(  view_productos.jtf_modelo.getText());
+             Integer precio_venta=Integer.parseInt(view_productos.jtf_precio_venta.getText());
+             Integer existencias=Integer.parseInt(view_productos.jtf_existencias.getText());
+             String marca=this.view_productos.jtf_marca.getText();
+             String modelo=this.view_productos.jtf_modelo.getText();
              
              
-             conection.executeUpdate ( "update clientes set id_productos='"+id_productos+"',productos='"+productos+"',desripcion='"+descripcion+"',precio_compra='"+precio_compra+"',precio_venta='"+precio_venta+"',marca='"+marca+"',modelo='"+modelo+"'where id_cliente='"+this.view_productos.jtf_id_productos.getText()+"';");
+             conection.executeUpdate ( "update productos set id_producto='"+id_producto+"',producto='"+producto+"',descripcion='"+descripcion+"',precio_compra='"+precio_compra+"',precio_venta='"+precio_venta+"',Marca='"+marca+"',Modelo='"+modelo+"'where id_producto='"+this.view_productos.jtf_id_producto.getText()+"';");
        
        this.modelProductos.setValues();
-
+       modelProductos.initValues();
+       showValues();
      }
     
+    
     private void showValues(){
-        view_productos.jtf_id_productos.setText(""+modelProductos.getId_producto());
+        view_productos.jtf_id_producto.setText(""+modelProductos.getId_producto());
         view_productos.jtf_producto.setText(modelProductos.getProducto());
         view_productos.jtf_descripcion.setText(modelProductos.getDescripcion());
-        view_productos.jtf_precio_compra.setText(modelProductos.getPrecio_compra());
-        view_productos.jtf_precio_venta.setText(modelProductos.getPrecio_venta());
-        view_productos.jtf_existencias.setText(modelProductos.getExistencias());
+        view_productos.jtf_precio_compra.setText(""+modelProductos.getPrecio_compra());
+        view_productos.jtf_precio_venta.setText(""+modelProductos.getPrecio_venta());
+        view_productos.jtf_existencias.setText(""+modelProductos.getExistencias());
         view_productos.jtf_marca.setText(modelProductos.getMarca());
         view_productos.jtf_modelo.setText(modelProductos.getModelo());
     }

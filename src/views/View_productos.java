@@ -41,7 +41,7 @@ public class View_productos extends javax.swing.JPanel {
         jl_precio_compra = new javax.swing.JLabel();
         jl_precio_venta = new javax.swing.JLabel();
         jl_existencias = new javax.swing.JLabel();
-        jtf_id_productos = new javax.swing.JTextField();
+        jtf_id_producto = new javax.swing.JTextField();
         jtf_producto = new javax.swing.JTextField();
         jtf_descripcion = new javax.swing.JTextField();
         jtf_precio_compra = new javax.swing.JTextField();
@@ -147,8 +147,8 @@ public class View_productos extends javax.swing.JPanel {
         jl_existencias.setText("existencias");
         add(jl_existencias);
         jl_existencias.setBounds(219, 138, 53, 14);
-        add(jtf_id_productos);
-        jtf_id_productos.setBounds(84, 59, 102, 20);
+        add(jtf_id_producto);
+        jtf_id_producto.setBounds(84, 59, 102, 20);
         add(jtf_producto);
         jtf_producto.setBounds(84, 97, 102, 20);
         add(jtf_descripcion);
@@ -173,7 +173,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnFirst);
-        jbtnFirst.setBounds(97, 208, 43, 23);
+        jbtnFirst.setBounds(90, 208, 50, 23);
 
         jbtnPrevious.setText("<");
         add(jbtnPrevious);
@@ -186,7 +186,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnNext);
-        jbtnNext.setBounds(205, 208, 41, 23);
+        jbtnNext.setBounds(196, 208, 50, 23);
 
         jbtnLast.setText(">l");
         jbtnLast.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +195,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnLast);
-        jbtnLast.setBounds(256, 208, 43, 23);
+        jbtnLast.setBounds(256, 208, 50, 23);
 
         jbtn_agregar.setText("Agregar");
         jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -204,11 +204,11 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtn_agregar);
-        jbtn_agregar.setBounds(426, 37, 93, 23);
+        jbtn_agregar.setBounds(420, 50, 93, 23);
 
         jbtn_eliminar.setText("Eliminar");
         add(jbtn_eliminar);
-        jbtn_eliminar.setBounds(426, 66, 93, 23);
+        jbtn_eliminar.setBounds(420, 90, 93, 23);
 
         jbtn_editar.setText("Editar");
         jbtn_editar.addActionListener(new java.awt.event.ActionListener() {
@@ -217,11 +217,11 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtn_editar);
-        jbtn_editar.setBounds(426, 100, 93, 23);
+        jbtn_editar.setBounds(420, 130, 93, 23);
 
         jbtn_buscar.setText("Buscar");
         add(jbtn_buscar);
-        jbtn_buscar.setBounds(426, 163, 93, 23);
+        jbtn_buscar.setBounds(420, 200, 93, 23);
 
         jl_marca.setForeground(new java.awt.Color(153, 0, 0));
         jl_marca.setText("Marca");
@@ -239,10 +239,7 @@ public class View_productos extends javax.swing.JPanel {
 
         J_tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "id_producto", "producto", "descripcion", "precio_compra", "precio_venta", "existencias", "marca", "modelo"
@@ -251,7 +248,7 @@ public class View_productos extends javax.swing.JPanel {
         jScrollPane6.setViewportView(J_tabla);
 
         add(jScrollPane6);
-        jScrollPane6.setBounds(20, 260, 703, 90);
+        jScrollPane6.setBounds(20, 260, 703, 60);
 
         jbtn_guardar.setText("Guardar");
         jbtn_guardar.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +257,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtn_guardar);
-        jbtn_guardar.setBounds(426, 129, 93, 23);
+        jbtn_guardar.setBounds(420, 170, 93, 23);
 
         jLabel2.setForeground(new java.awt.Color(153, 0, 0));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/maxresdefault.jpg"))); // NOI18N
@@ -329,7 +326,7 @@ public class View_productos extends javax.swing.JPanel {
     public javax.swing.JLabel jl_producto;
     public javax.swing.JTextField jtf_descripcion;
     public javax.swing.JTextField jtf_existencias;
-    public javax.swing.JTextField jtf_id_productos;
+    public javax.swing.JTextField jtf_id_producto;
     public javax.swing.JTextField jtf_marca;
     public javax.swing.JTextField jtf_modelo;
     public javax.swing.JTextField jtf_precio_compra;

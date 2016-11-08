@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/controllers/ControllerClientes.java</file>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/models/Model_users.java</file>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/models/ModelRegist_users.java</file>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/models/ModelClientes.java</file>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/controllers/ControllerRegist_users.java</file>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/models/ModelCompras.java</file>
-            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/MVC_DB/src/views/ViewRegist_users.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/models/ModelClientes.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/controllers/ControllerClientes.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/controllers/ControllerProvedores.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/views/View_provedores.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/controllers/ControllerProductos.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/views/ViewClientes.java</file>
+            <file>file:/C:/Users/Raymond%20SIMOLY/Desktop/Database%20cuarto/Nueva%20carpeta%20Mvc_db/MVC_DB/src/models/ModelProvedores.java</file>
         </group>
     </open-files>
 </project-private>

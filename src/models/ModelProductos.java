@@ -1,6 +1,8 @@
 
 package models;
+import javax.swing.table.DefaultTableModel;
 import sax.DBConnection;
+import views.View_productos;
 /**
  *
  * @author MATRIX
@@ -12,12 +14,15 @@ public class ModelProductos {
     private int id_producto;
     private String producto;
     private String descripcion;
-    private String precio_compra;
-    private String precio_venta;
-    private String existencias;
+    private int precio_compra;
+    private int precio_venta;
+    private int existencias;
     private String marca;
     private String modelo;
     
+    View_productos view_productos= new View_productos();
+      public  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_producto", "producto","descripcion","precio_compra","precio_venta","existencias","Marca","Modelo"}, 0);
+
     
     public void moveNext(){
         getConection().moveNext();
@@ -40,21 +45,42 @@ public class ModelProductos {
     }
     
     public void initValues(){
-        getConection().executeQuery("SELECT id_producto, producto, descripcion,precio_compra,precio_venta,existencias,marca,modelo FROM productos;");
+        getConection().executeQuery("SELECT id_producto, producto, descripcion,precio_compra,precio_venta,existencias,Marca,Modelo FROM productos;");
         getConection().moveNext();
         setValues();
     }
     public void setValues(){
-        this.setId_producto(getConection().getInteger("id_producto"));
-        this.setProducto(getConection().getString("producto"));
-        this.setDescripcion(getConection().getString("descripcion"));
-        this.setPrecio_compra(getConection().getString("precio_compra"));
-        this.setPrecio_venta(getConection().getString("precio_venta"));
-        this.setExistencias(getConection().getString("existencias"));
-        this.setMarca(getConection().getString("marca"));
-        this.setMarca(getConection().getString("modelo"));
+        this.id_producto=conection.getInteger("id_producto");
+        this.producto=conection.getString("producto");
+        this.descripcion=conection.getString("descripcion");
+        this.setPrecio_compra(conection.getInteger("precio_compra"));
+        this.setPrecio_venta(conection.getInteger("precio_venta"));
+        this.setExistencias(conection.getInteger("existencias"));
+        this.marca=conection.getString("Marca");
+        this.modelo=conection.getString("Modelo");
     }
+     public void eliminarValues()
+    {
+        conection.executeUpdate ("delete from productos where id_producto="+id_producto);
 
+           this.view_productos.jtf_producto.setText("");
+             this.view_productos.jtf_descripcion.setText(""); 
+             this.view_productos.jtf_precio_compra.setText("");
+             this.view_productos.jtf_precio_venta.setText("");
+             this.view_productos.jtf_existencias.setText("");
+             this.view_productos.jtf_marca.setText("");
+             this.view_productos.jtf_modelo.setText("");
+             
+             
+             initValues();
+             
+    }
+     public void Tabla() {
+        while (conection.moveNext()) {
+            setValues();
+               tableModel.addRow(new Object []{id_producto, producto,descripcion,precio_compra,precio_venta,existencias,marca,modelo});
+        }
+     }
     /**
      * @return the conection
      */
@@ -111,48 +137,9 @@ public class ModelProductos {
         this.descripcion = descripcion;
     }
 
-    /**
-     * @return the precio_compra
-     */
-    public String getPrecio_compra() {
-        return precio_compra;
-    }
+    
 
-    /**
-     * @param precio_compra the precio_compra to set
-     */
-    public void setPrecio_compra(String precio_compra) {
-        this.precio_compra = precio_compra;
-    }
-
-    /**
-     * @return the precio_venta
-     */
-    public String getPrecio_venta() {
-        return precio_venta;
-    }
-
-    /**
-     * @param precio_venta the precio_venta to set
-     */
-    public void setPrecio_venta(String precio_venta) {
-        this.precio_venta = precio_venta;
-    }
-
-    /**
-     * @return the existencias
-     */
-    public String getExistencias() {
-        return existencias;
-    }
-
-    /**
-     * @param existencias the existencias to set
-     */
-    public void setExistencias(String existencias) {
-        this.existencias = existencias;
-    }
-
+   
     /**
      * @return the marca
      */
@@ -179,6 +166,48 @@ public class ModelProductos {
      */
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    /**
+     * @return the precio_compra
+     */
+    public int getPrecio_compra() {
+        return precio_compra;
+    }
+
+    /**
+     * @param precio_compra the precio_compra to set
+     */
+    public void setPrecio_compra(int precio_compra) {
+        this.precio_compra = precio_compra;
+    }
+
+    /**
+     * @return the precio_venta
+     */
+    public int getPrecio_venta() {
+        return precio_venta;
+    }
+
+    /**
+     * @param precio_venta the precio_venta to set
+     */
+    public void setPrecio_venta(int precio_venta) {
+        this.precio_venta = precio_venta;
+    }
+
+    /**
+     * @return the existencias
+     */
+    public int getExistencias() {
+        return existencias;
+    }
+
+    /**
+     * @param existencias the existencias to set
+     */
+    public void setExistencias(int existencias) {
+        this.existencias = existencias;
     }
 }
     

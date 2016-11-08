@@ -32,6 +32,7 @@ public class ControllerClientes implements ActionListener{
         
         initView();
         showData();
+        
     }
         private void initView(){
         modelClientes.initValues();
@@ -56,13 +57,16 @@ public class ControllerClientes implements ActionListener{
          agregarRegistro(); 
         }
         else if(ae.getSource()==viewClientes.jbtn_guardar){
-         guadarRegistro();   
+         guadarRegistro(); 
+         
         }
         else if(ae.getSource()==viewClientes.jbtn_eliminar){
             jbtnEliminarActionPerformed();
+            
         }
         else if(ae.getSource()==viewClientes.jbtn_editar)
-          editarValues();   
+          editarValues(); 
+        
         }
    
     
@@ -123,13 +127,21 @@ public class ControllerClientes implements ActionListener{
                     + "('"+ nombre +"','"+ap_paterno+"','"+ap_materno+"','"+telefono+"','"+email+"','"+rfc+"','"+calle+"','"+numero+"','"+colonia+"','"+ciudad+"','"+estado+"');"); 
             
            this.modelClientes.setValues();
-           //showValues();
+          
+           modelClientes.initValues();
+         this.modelClientes.Tabla();
        
 
     }
      private void showData() {
         viewClientes.J_tabla.setModel(modelClientes.tableModel);
-        modelClientes.Tabla();
+         this.modelClientes.limpiaTabla();
+          this.modelClientes.setValues();
+          
+         
+       
+        
+       
     }
      public void editarValues(){
          Integer id_cliente=Integer.parseInt(viewClientes.jtf_id_cliente.getText());
@@ -148,6 +160,9 @@ public class ControllerClientes implements ActionListener{
              conection.executeUpdate ( "update clientes set nombre='"+nombre+"',ap_paterno='"+ap_paterno+"',ap_materno='"+ap_materno+"',telefono='"+telefono+"',email='"+email+"',rfc='"+rfc+"',calle='"+calle+"',numero='"+numero+"',colonia='"+colonia+"',ciudad='"+ciudad+"',estado='"+estado+"' where id_cliente='"+this.viewClientes.jtf_id_cliente.getText()+"';");
        
        this.modelClientes.setValues();
+       
+       modelClientes.initValues();
+     this.modelClientes.Tabla();
 
      }
     
@@ -164,8 +179,9 @@ public class ControllerClientes implements ActionListener{
         viewClientes.jtf_calle.setText(modelClientes.getCalle());
         viewClientes.jtf_numero.setText(""+modelClientes.getNumero());
         viewClientes.jtf_colonia.setText(modelClientes.getColonia());
-        viewClientes.jtf_ciudad.setText(""+modelClientes.getCiudad());
+        viewClientes.jtf_ciudad.setText(modelClientes.getCiudad());
         viewClientes.jtf_estado.setText(modelClientes.getEstado());
+        
     }
 
    
