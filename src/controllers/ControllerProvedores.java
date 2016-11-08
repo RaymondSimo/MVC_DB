@@ -54,7 +54,7 @@ public class ControllerProvedores implements ActionListener {
             System.out.println("First");
         } else if (e.getSource() == view_provedores.jbtn_anterior) {
             jbtnPreviousActionPerformed();
-            System.out.println("Anteripr");
+            System.out.println("Anterior");
         } else if (e.getSource() == view_provedores.jbtn_siguiente) {
             jbtnNextActionPerformed();
             System.out.println("siguiente");
