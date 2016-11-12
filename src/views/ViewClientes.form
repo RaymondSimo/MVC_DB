@@ -43,11 +43,10 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jbtn_guardar" alignment="0" max="32767" attributes="0"/>
                           <Component id="jbtn_agregar" max="32767" attributes="0"/>
-                          <Component id="jbtn_buscar" alignment="0" max="32767" attributes="0"/>
                           <Component id="jbtn_eliminar" alignment="0" max="32767" attributes="0"/>
                           <Component id="jbtn_editar" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -63,11 +62,9 @@
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jbtn_agregar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbtn_buscar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jbtn_eliminar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jbtn_editar" min="-2" max="-2" attributes="0"/>
@@ -101,55 +98,58 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jl_rfc" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jl_colonia" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jl_ap_materno" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jl_id_cliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jtf_ap_materno" pref="118" max="32767" attributes="0"/>
-                                      <Component id="jtf_id_cliente" max="32767" attributes="0"/>
-                                      <Component id="jtf_rfc" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jtf_colonia" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="jl_rfc" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jl_colonia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jl_ap_materno" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jl_id_cliente" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="29" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jtf_ap_materno" pref="118" max="32767" attributes="0"/>
+                                  <Component id="jtf_id_cliente" max="32767" attributes="0"/>
+                                  <Component id="jtf_rfc" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtf_colonia" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jbtn_primero" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jbtn_anterior" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jbtn_siguiente" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="6" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jl_calle" min="-2" max="-2" attributes="0"/>
                               <Component id="jl_telefono" min="-2" max="-2" attributes="0"/>
                               <Component id="jl_ciudad" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jbtn_primero" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jbtn_anterior" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jtf_calle" pref="109" max="32767" attributes="0"/>
+                              <Component id="jtf_telefono" max="32767" attributes="0"/>
+                              <Component id="jtf_nombre" max="32767" attributes="0"/>
+                              <Component id="jtf_ciudad" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jbtn_siguiente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jbtn_ultimo" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jtf_calle" pref="109" max="32767" attributes="0"/>
-                          <Component id="jtf_telefono" max="32767" attributes="0"/>
-                          <Component id="jtf_nombre" max="32767" attributes="0"/>
-                          <Component id="jtf_ciudad" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -172,6 +172,11 @@
                               <Component id="jtf_numero" pref="146" max="32767" attributes="0"/>
                               <Component id="jtf_estado" max="32767" attributes="0"/>
                           </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="comboFiltro" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txtFiltro" min="-2" pref="145" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -225,6 +230,9 @@
                       <Component id="jbtn_siguiente" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jbtn_anterior" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jbtn_primero" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboFiltro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtFiltro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -396,6 +404,42 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
+        <Component class="javax.swing.JComboBox" name="comboFiltro">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="11">
+                <StringItem index="0" value="id_cliente"/>
+                <StringItem index="1" value="Nombre"/>
+                <StringItem index="2" value="Ap_paterno"/>
+                <StringItem index="3" value="Ap_materno"/>
+                <StringItem index="4" value="Telefono"/>
+                <StringItem index="5" value="Email.RFC"/>
+                <StringItem index="6" value="Calle"/>
+                <StringItem index="7" value="Numero"/>
+                <StringItem index="8" value="Colonia"/>
+                <StringItem index="9" value="Ciudad"/>
+                <StringItem index="10" value="Estado"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtFiltro">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtFiltroKeyTyped"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Buscar por:"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="jbtn_agregar">
@@ -558,14 +602,6 @@
     <Component class="javax.swing.JButton" name="jbtn_eliminar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="jbtn_buscar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

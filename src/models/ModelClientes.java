@@ -1,5 +1,7 @@
 
 package models;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import sax.DBConnection;
 import views.ViewClientes;
@@ -15,7 +17,7 @@ public class ModelClientes {
     private String nombre;
     private String ap_paterno;
     private String ap_materno;
-    private int telefono;
+    private String telefono;
     private String email;
     private String rfc;
     private String calle;
@@ -23,6 +25,8 @@ public class ModelClientes {
     private String colonia;
     private String ciudad;
     private String estado;
+    
+    
 ViewClientes viewClientes = new ViewClientes();
 
     
@@ -58,20 +62,7 @@ ViewClientes viewClientes = new ViewClientes();
 
     
 
-    /**
-     * @return the telefono
-     */
-    public int getTelefono() {
-        return telefono;
-    }
-
-    /**
-     * @param telefono the telefono to set
-     */
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
+   
     /**
      * @return the email
      */
@@ -202,7 +193,7 @@ ViewClientes viewClientes = new ViewClientes();
         this.nombre = conection.getString("nombre");
         this.ap_paterno = conection.getString("ap_paterno");
         this.ap_materno = conection.getString("ap_materno");
-        this.telefono = conection.getInteger("telefono");
+        this.setTelefono(conection.getString("telefono"));
         this.email = conection.getString("email");
         this.rfc = conection.getString("rfc");
         this.calle = conection.getString("calle");
@@ -216,7 +207,7 @@ ViewClientes viewClientes = new ViewClientes();
     public void Tabla() {
         while (conection.moveNext()) {
             setValues();
-               tableModel.addRow(new Object []{id_cliente, nombre,ap_paterno,ap_materno,telefono,email,rfc,calle,numero,colonia,ciudad,estado});
+             tableModel.addRow(new Object []{id_cliente, nombre,ap_paterno,ap_materno, getTelefono(),email,rfc,calle,numero,colonia,ciudad,estado});
          
         }
         
@@ -267,13 +258,28 @@ ViewClientes viewClientes = new ViewClientes();
         this.ap_materno = ap_materno;
     }
   public  void limpiaTabla(){
-        try{
-            DefaultTableModel temp = (DefaultTableModel) viewClientes.J_tabla.getModel();
-            int a =temp.getRowCount()-1;
-            for(int i=0; i<a; i++)
-                temp.removeRow(i); 
-        }catch(Exception e){
-            System.out.println(e);
-        }
+      
+       
+  DefaultTableModel tableModel = new DefaultTableModel(new String [] {"id_cliente", "nombre","ap_paterno","ap_materno","telefono","email","rfc","calle","numero","colonia","ciudad","estado"}, 0);
+
+      
     }
+  
+  
+
+
+    /**
+     * @return the telefono
+     */
+    public String getTelefono() {
+        return telefono;
+    }
+
+    /**
+     * @param telefono the telefono to set
+     */
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+  
 }

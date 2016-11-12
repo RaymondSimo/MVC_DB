@@ -57,13 +57,15 @@ public class ViewClientes extends javax.swing.JPanel {
         jbtn_anterior = new javax.swing.JButton();
         jbtn_siguiente = new javax.swing.JButton();
         jbtn_ultimo = new javax.swing.JButton();
+        comboFiltro = new javax.swing.JComboBox<>();
+        txtFiltro = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jbtn_agregar = new javax.swing.JButton();
         jbtn_editar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         J_tabla = new javax.swing.JTable();
         jbtn_eliminar = new javax.swing.JButton();
-        jbtn_buscar = new javax.swing.JButton();
         jbtn_guardar = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -135,50 +137,63 @@ public class ViewClientes extends javax.swing.JPanel {
 
         jbtn_ultimo.setText(">|");
 
+        comboFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "id_cliente", "Nombre", "Ap_paterno", "Ap_materno", "Telefono", "Email.RFC", "Calle", "Numero", "Colonia", "Ciudad", "Estado" }));
+
+        txtFiltro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtFiltroKeyTyped(evt);
+            }
+        });
+
+        jLabel1.setText("Buscar por:");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jl_rfc)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jl_colonia)
+                            .addComponent(jl_ap_materno)
+                            .addComponent(jl_id_cliente))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jtf_ap_materno, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                                .addComponent(jtf_id_cliente)
+                                .addComponent(jtf_rfc)
+                                .addComponent(jtf_colonia))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jl_colonia)
-                                    .addComponent(jl_ap_materno)
-                                    .addComponent(jl_id_cliente))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtf_ap_materno, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                    .addComponent(jtf_id_cliente)
-                                    .addComponent(jtf_rfc)
-                                    .addComponent(jtf_colonia)))
-                            .addComponent(jl_rfc))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                .addComponent(jbtn_primero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbtn_anterior)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbtn_siguiente)))))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jl_calle)
                             .addComponent(jl_telefono)
                             .addComponent(jl_ciudad)
-                            .addComponent(jLabel2)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jbtn_primero)
+                            .addComponent(jLabel2))
                         .addGap(18, 18, 18)
-                        .addComponent(jbtn_anterior)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtf_calle, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(jtf_telefono)
+                            .addComponent(jtf_nombre)
+                            .addComponent(jtf_ciudad))
+                        .addGap(18, 18, 18))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jbtn_siguiente)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtn_ultimo))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jtf_calle, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                        .addComponent(jtf_telefono)
-                        .addComponent(jtf_nombre)
-                        .addComponent(jtf_ciudad)))
-                .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbtn_ultimo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +210,11 @@ public class ViewClientes extends javax.swing.JPanel {
                         .addGap(56, 56, 56)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jtf_numero, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                            .addComponent(jtf_estado))))
+                            .addComponent(jtf_estado)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(comboFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -239,7 +258,10 @@ public class ViewClientes extends javax.swing.JPanel {
                     .addComponent(jbtn_ultimo)
                     .addComponent(jbtn_siguiente)
                     .addComponent(jbtn_anterior)
-                    .addComponent(jbtn_primero))
+                    .addComponent(jbtn_primero)
+                    .addComponent(comboFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addContainerGap())
         );
 
@@ -297,8 +319,6 @@ public class ViewClientes extends javax.swing.JPanel {
 
         jbtn_eliminar.setText("Eliminar");
 
-        jbtn_buscar.setText("Buscar");
-
         jbtn_guardar.setText("Guardar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -315,10 +335,9 @@ public class ViewClientes extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jbtn_guardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbtn_agregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbtn_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbtn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbtn_editar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 27, Short.MAX_VALUE)))
+                        .addGap(0, 21, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -329,11 +348,9 @@ public class ViewClientes extends javax.swing.JPanel {
                         .addGap(24, 24, 24)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
+                        .addGap(93, 93, 93)
                         .addComponent(jbtn_agregar)
                         .addGap(18, 18, 18)
-                        .addComponent(jbtn_buscar)
-                        .addGap(27, 27, 27)
                         .addComponent(jbtn_eliminar)
                         .addGap(18, 18, 18)
                         .addComponent(jbtn_editar)
@@ -369,9 +386,15 @@ public class ViewClientes extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_agregarActionPerformed
 
+    private void txtFiltroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFiltroKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFiltroKeyTyped
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTable J_tabla;
+    public javax.swing.JComboBox<String> comboFiltro;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -379,7 +402,6 @@ public class ViewClientes extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_anterior;
-    public javax.swing.JButton jbtn_buscar;
     public javax.swing.JButton jbtn_editar;
     public javax.swing.JButton jbtn_eliminar;
     public javax.swing.JButton jbtn_guardar;
@@ -409,5 +431,6 @@ public class ViewClientes extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_numero;
     public javax.swing.JTextField jtf_rfc;
     public javax.swing.JTextField jtf_telefono;
+    public javax.swing.JTextField txtFiltro;
     // End of variables declaration//GEN-END:variables
 }

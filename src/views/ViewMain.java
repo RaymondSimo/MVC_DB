@@ -23,10 +23,12 @@ public class ViewMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem6 = new javax.swing.JMenuItem();
         jm_bar = new javax.swing.JMenuBar();
         jm_archivos = new javax.swing.JMenu();
         jmi_iniciar_sesion = new javax.swing.JMenuItem();
         jmiUsuarios = new javax.swing.JMenuItem();
+        jmicerrarSesion = new javax.swing.JMenuItem();
         jm_catalogos = new javax.swing.JMenu();
         jmiClientes = new javax.swing.JMenuItem();
         jmiProductos = new javax.swing.JMenuItem();
@@ -41,8 +43,13 @@ public class ViewMain extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jm_acerca = new javax.swing.JMenu();
+        jmenu_logout = new javax.swing.JMenu();
+        jmi_salir = new javax.swing.JMenuItem();
+
+        jMenuItem6.setText("jMenuItem6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 255, 255));
         setForeground(new java.awt.Color(0, 255, 153));
 
         jm_archivos.setText("Archivos");
@@ -51,11 +58,16 @@ public class ViewMain extends javax.swing.JFrame {
         jm_archivos.add(jmi_iniciar_sesion);
 
         jmiUsuarios.setText("Usuarios");
+        jmiUsuarios.setEnabled(false);
         jm_archivos.add(jmiUsuarios);
+
+        jmicerrarSesion.setText("Salir");
+        jm_archivos.add(jmicerrarSesion);
 
         jm_bar.add(jm_archivos);
 
         jm_catalogos.setText("Catalogos");
+        jm_catalogos.setEnabled(false);
 
         jmiClientes.setText("Clientes");
         jm_catalogos.add(jmiClientes);
@@ -69,6 +81,7 @@ public class ViewMain extends javax.swing.JFrame {
         jm_bar.add(jm_catalogos);
 
         jm_operciones.setText("Operacioes");
+        jm_operciones.setEnabled(false);
 
         jmiCompras.setText("Compras");
         jm_operciones.add(jmiCompras);
@@ -79,6 +92,7 @@ public class ViewMain extends javax.swing.JFrame {
         jm_bar.add(jm_operciones);
 
         jm_reportes.setText("Reportes");
+        jm_reportes.setEnabled(false);
 
         jMenuItem1.setText("Clientes");
         jm_reportes.add(jMenuItem1);
@@ -103,7 +117,16 @@ public class ViewMain extends javax.swing.JFrame {
         jm_bar.add(jm_reportes);
 
         jm_acerca.setText("A cerca de");
+        jm_acerca.setEnabled(false);
         jm_bar.add(jm_acerca);
+
+        jmenu_logout.setText("Logout");
+        jmenu_logout.setEnabled(false);
+
+        jmi_salir.setText("Salir");
+        jmenu_logout.add(jmi_salir);
+
+        jm_bar.add(jmenu_logout);
 
         setJMenuBar(jm_bar);
 
@@ -158,6 +181,14 @@ public class ViewMain extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -173,12 +204,14 @@ public class ViewMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     public javax.swing.JMenu jm_acerca;
     public javax.swing.JMenu jm_archivos;
     public javax.swing.JMenuBar jm_bar;
     public javax.swing.JMenu jm_catalogos;
     public javax.swing.JMenu jm_operciones;
     public javax.swing.JMenu jm_reportes;
+    public javax.swing.JMenu jmenu_logout;
     public javax.swing.JMenuItem jmiClientes;
     public javax.swing.JMenuItem jmiCompras;
     public javax.swing.JMenuItem jmiProductos;
@@ -186,5 +219,7 @@ public class ViewMain extends javax.swing.JFrame {
     public javax.swing.JMenuItem jmiUsuarios;
     public javax.swing.JMenuItem jmiVentas;
     public javax.swing.JMenuItem jmi_iniciar_sesion;
+    public javax.swing.JMenuItem jmi_salir;
+    public javax.swing.JMenuItem jmicerrarSesion;
     // End of variables declaration//GEN-END:variables
 }

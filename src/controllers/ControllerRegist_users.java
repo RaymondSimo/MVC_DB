@@ -25,6 +25,7 @@ public class ControllerRegist_users implements ActionListener{
         this.viewRegist_users.jbtn_last.addActionListener(this);
         this.viewRegist_users.jbtn_next.addActionListener(this);
         this.viewRegist_users.jbtn_previous.addActionListener(this);
+        this.viewRegist_users.jbtn_guardar.addActionListener(this);
         
          initView();
         showData();
@@ -119,7 +120,7 @@ public class ControllerRegist_users implements ActionListener{
              conection.executeUpdate ( "update users set nombre='"+nombre+"',nombre_usuario='"+nombre_usuario+"',contrasena='"+contrasena+"',nivel='"+nivel+"',estado='"+estado+"' where id_usuario='"+this.viewRegist_users.jtf_id_usuario.getText()+"';");
        
        this.modelRegist_users.setValues();
-
+        this.modelRegist_users.initValues();
      }
       
      public void guadarRegistro() {        
@@ -146,7 +147,8 @@ public class ControllerRegist_users implements ActionListener{
             conection.executeUpdate ( "insert into users (id_usuario,nombre,nombre_usuario,contrasena,nivel,estado)"+" values "
                     + "('"+ id_usuario+"','"+ nombre +"','"+ nombre_usuario +"','"+contrasena+"','"+nivel+"','"+estado+"');"); 
             
-          //this.modelRegist_users.setValues();
+          this.modelRegist_users.setValues();
+          this.modelRegist_users.initValues();
           showValues();
        
 

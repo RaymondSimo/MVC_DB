@@ -1,5 +1,6 @@
 
 package models;
+import java.sql.SQLException;
 import sax.DBConnection;
 import views.ViewUsuarios;
 import views.ViewClientes;
@@ -62,20 +63,15 @@ public class Model_users {
     }
     public boolean conntectedUser(){
         boolean tPragg=false;
-        
-     
-     String query="SELECT * FROM users WHERE nombre_usuario='"+usuario+"'&& contrasena='"+contrasena+"'";
-     conection.executeQuery(query);
-      conection.moveNext();
-      
-      if(usuario.equals(conection.getString("nombre_usuario"))&&contrasena.equals(conection.getString("contrasena"))){
-          tPragg=true;
-          nivel=conection.getString("nivel");
-          estado=conection.getString("estado");
-      }
-      return tPragg;
-      
-      
+        String query="SELECT * FROM users WHERE nombre_usuario='"+usuario+"'&& contrasena='"+contrasena+"'";
+        conection.executeQuery(query);
+        conection.moveNext();
+        if(usuario.equals(conection.getString("nombre_usuario"))&&contrasena.equals(conection.getString("contrasena"))){
+            tPragg=true;
+            nivel=conection.getString("nivel");
+            estado=conection.getString("estado");
+        }
+        return tPragg;  
     }
     
     
