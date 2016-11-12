@@ -2,6 +2,8 @@
 package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.PreparedStatement;
+import javax.swing.table.DefaultTableModel;
 import views.View_productos;
 import models.ModelProductos;
 import sax.DBConnection;
@@ -13,7 +15,7 @@ import sax.DBConnection;
 
 
 public class ControllerProductos implements ActionListener {
-    
+   
     private final View_productos view_productos;
     private final ModelProductos modelProductos;
     private DBConnection conection = new DBConnection(3306,"localhost", "acme_shop", "root", "1234");
@@ -36,7 +38,12 @@ public class ControllerProductos implements ActionListener {
         initView();
         showData();
     }
-            
+     void Limpiar(){
+         while(view_productos.J_tabla.getRowCount()!=0){
+             ((DefaultTableModel)view_productos.J_tabla.getModel()).removeRow(0);
+         }
+     }  
+     
     private void initView(){
         modelProductos.initValues();
         showValues();
@@ -52,16 +59,30 @@ public class ControllerProductos implements ActionListener {
            jbtnNextActionPerformed();
        else if(e.getSource()==view_productos.jbtnLast)
            jbtnLastActionPerformed();
-       else if(e.getSource()==view_productos.jbtn_agregar)
-         agregarRegistro(); 
+       
+       else if(e.getSource()==view_productos.jbtn_agregar){
+         agregarRegistro();
+        
+       }
+       
+       
         else if(e.getSource()==view_productos.jbtn_eliminar){
          modelProductos.eliminarValues();
+          initView();
+          Limpiar();
+          showData();
         }
         else if(e.getSource()==view_productos.jbtn_editar){
           editarValues();
+           initView();
+          Limpiar();
+          showData();
         }
        else if(e.getSource()==view_productos.jbtn_guardar){
           guadarRegistro(); 
+           initView();
+          Limpiar();
+          showData();
        }
         
     }
@@ -112,7 +133,7 @@ public class ControllerProductos implements ActionListener {
        
              
 
-            conection.executeUpdate("insert into productos(producto, descripcion,precio_compra,precio_venta,existencias,Marca,Modelo)"+" values "
+            conection.executeUpdate("insert into productos (producto, descripcion,precio_compra,precio_venta,existencias,Marca,Modelo)"+" values "
                     + "('"+producto+"','"+descripcion+"','"+precio_compra+"','"+precio_venta+"','"+existencias+"','"+marca+"','"+modelo+"');"); 
             
            this.modelProductos.setValues();
@@ -132,7 +153,7 @@ public class ControllerProductos implements ActionListener {
              String modelo=this.view_productos.jtf_modelo.getText();
              
              
-             conection.executeUpdate ( "update productos set id_producto='"+id_producto+"',producto='"+producto+"',descripcion='"+descripcion+"',precio_compra='"+precio_compra+"',precio_venta='"+precio_venta+"',Marca='"+marca+"',Modelo='"+modelo+"'where id_producto='"+this.view_productos.jtf_id_producto.getText()+"';");
+             conection.executeUpdate ( "update productos set id_producto='"+id_producto+"',producto='"+producto+"',descripcion='"+descripcion+"',precio_compra='"+precio_compra+"',precio_venta='"+precio_venta+"',existencias='"+existencias+"',marca='"+marca+"',modelo='"+modelo+"'where id_producto='"+this.view_productos.jtf_id_producto.getText()+"';");
        
        this.modelProductos.setValues();
        modelProductos.initValues();
@@ -150,6 +171,7 @@ public class ControllerProductos implements ActionListener {
         view_productos.jtf_marca.setText(modelProductos.getMarca());
         view_productos.jtf_modelo.setText(modelProductos.getModelo());
     }
+
 }
     
 

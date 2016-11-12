@@ -63,6 +63,8 @@ public class View_productos extends javax.swing.JPanel {
         J_tabla = new javax.swing.JTable();
         jbtn_guardar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jbtn_buscar1 = new javax.swing.JButton();
+        jbtn_actualizar = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -121,34 +123,36 @@ public class View_productos extends javax.swing.JPanel {
         jl_id_producto.setForeground(new java.awt.Color(153, 0, 0));
         jl_id_producto.setText("id_productos");
         add(jl_id_producto);
-        jl_id_producto.setBounds(10, 62, 62, 14);
+        jl_id_producto.setBounds(10, 62, 80, 14);
 
         jl_producto.setForeground(new java.awt.Color(153, 0, 0));
         jl_producto.setText("producto");
         add(jl_producto);
-        jl_producto.setBounds(10, 100, 43, 14);
+        jl_producto.setBounds(10, 100, 70, 14);
 
         jl_descripcion.setForeground(new java.awt.Color(153, 0, 0));
         jl_descripcion.setText("descripcion");
         add(jl_descripcion);
-        jl_descripcion.setBounds(10, 138, 53, 14);
+        jl_descripcion.setBounds(10, 138, 80, 14);
 
         jl_precio_compra.setForeground(new java.awt.Color(153, 0, 0));
         jl_precio_compra.setText("precio_compra");
         add(jl_precio_compra);
-        jl_precio_compra.setBounds(223, 62, 70, 14);
+        jl_precio_compra.setBounds(223, 62, 90, 14);
 
         jl_precio_venta.setForeground(new java.awt.Color(153, 0, 0));
         jl_precio_venta.setText("precio_venta");
         add(jl_precio_venta);
-        jl_precio_venta.setBounds(219, 100, 63, 14);
+        jl_precio_venta.setBounds(219, 100, 90, 14);
 
         jl_existencias.setForeground(new java.awt.Color(153, 0, 0));
         jl_existencias.setText("existencias");
         add(jl_existencias);
-        jl_existencias.setBounds(219, 138, 53, 14);
+        jl_existencias.setBounds(219, 138, 90, 14);
+
+        jtf_id_producto.setEditable(false);
         add(jtf_id_producto);
-        jtf_id_producto.setBounds(84, 59, 102, 20);
+        jtf_id_producto.setBounds(90, 60, 102, 20);
         add(jtf_producto);
         jtf_producto.setBounds(84, 97, 102, 20);
         add(jtf_descripcion);
@@ -160,7 +164,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jtf_precio_compra);
-        jtf_precio_compra.setBounds(311, 59, 84, 20);
+        jtf_precio_compra.setBounds(320, 60, 84, 20);
         add(jtf_precio_venta);
         jtf_precio_venta.setBounds(311, 97, 84, 20);
         add(jtf_existencias);
@@ -173,11 +177,11 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnFirst);
-        jbtnFirst.setBounds(70, 220, 50, 23);
+        jbtnFirst.setBounds(90, 208, 50, 23);
 
         jbtnPrevious.setText("<");
         add(jbtnPrevious);
-        jbtnPrevious.setBounds(140, 230, 41, 23);
+        jbtnPrevious.setBounds(146, 208, 41, 23);
 
         jbtnNext.setText(">");
         jbtnNext.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +190,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnNext);
-        jbtnNext.setBounds(190, 230, 50, 23);
+        jbtnNext.setBounds(196, 208, 50, 23);
 
         jbtnLast.setText(">l");
         jbtnLast.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +199,7 @@ public class View_productos extends javax.swing.JPanel {
             }
         });
         add(jbtnLast);
-        jbtnLast.setBounds(250, 220, 50, 23);
+        jbtnLast.setBounds(256, 208, 50, 23);
 
         jbtn_agregar.setText("Agregar");
         jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -226,14 +230,14 @@ public class View_productos extends javax.swing.JPanel {
         jl_marca.setForeground(new java.awt.Color(153, 0, 0));
         jl_marca.setText("Marca");
         add(jl_marca);
-        jl_marca.setBounds(10, 185, 29, 14);
+        jl_marca.setBounds(10, 179, 70, 20);
         add(jtf_marca);
         jtf_marca.setBounds(84, 182, 102, 20);
 
         jl_modelo.setForeground(new java.awt.Color(153, 0, 0));
         jl_modelo.setText("Modelo");
         add(jl_modelo);
-        jl_modelo.setBounds(219, 176, 34, 14);
+        jl_modelo.setBounds(219, 176, 90, 14);
         add(jtf_modelo);
         jtf_modelo.setBounds(311, 173, 84, 20);
 
@@ -245,10 +249,15 @@ public class View_productos extends javax.swing.JPanel {
                 "id_producto", "producto", "descripcion", "precio_compra", "precio_venta", "existencias", "marca", "modelo"
             }
         ));
+        J_tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                J_tablaMouseClicked(evt);
+            }
+        });
         jScrollPane6.setViewportView(J_tabla);
 
         add(jScrollPane6);
-        jScrollPane6.setBounds(20, 270, 703, 60);
+        jScrollPane6.setBounds(20, 260, 703, 270);
 
         jbtn_guardar.setText("Guardar");
         jbtn_guardar.addActionListener(new java.awt.event.ActionListener() {
@@ -263,7 +272,15 @@ public class View_productos extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/maxresdefault.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 750, 550);
+        jLabel2.setBounds(-20, -10, 750, 540);
+
+        jbtn_buscar1.setText("Buscar");
+        add(jbtn_buscar1);
+        jbtn_buscar1.setBounds(420, 200, 93, 23);
+
+        jbtn_actualizar.setText("actulizar");
+        add(jbtn_actualizar);
+        jbtn_actualizar.setBounds(520, 50, 90, 60);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtf_precio_compraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_precio_compraActionPerformed
@@ -294,6 +311,10 @@ public class View_productos extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_guardarActionPerformed
 
+    private void J_tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_J_tablaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_J_tablaMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTable J_tabla;
@@ -311,8 +332,10 @@ public class View_productos extends javax.swing.JPanel {
     public javax.swing.JButton jbtnLast;
     public javax.swing.JButton jbtnNext;
     public javax.swing.JButton jbtnPrevious;
+    public javax.swing.JButton jbtn_actualizar;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_buscar;
+    public javax.swing.JButton jbtn_buscar1;
     public javax.swing.JButton jbtn_editar;
     public javax.swing.JButton jbtn_eliminar;
     public javax.swing.JButton jbtn_guardar;
