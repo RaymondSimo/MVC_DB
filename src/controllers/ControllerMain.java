@@ -24,8 +24,8 @@ public class ControllerMain implements ActionListener{
         this.viewMain.jmiUsuarios.addActionListener(this);
         this.viewMain.jmiProductos.addActionListener(this);
         this.viewMain.jmiProveedores.addActionListener(this);
-        this.viewMain.jmiCompras.addActionListener(this);
         this.viewMain.jmiVentas.addActionListener(this);
+        this.viewMain.jmiCompras.addActionListener(this);
         this.viewMain.jmicerrarSesion.addActionListener(this);
         this.viewMain.jmi_salir.addActionListener(this);
         
@@ -55,6 +55,9 @@ public class ControllerMain implements ActionListener{
         else if(ae.getSource()==viewMain.jmi_salir){
             logOut();
         }
+        else if(ae.getSource()==viewMain.jmiVentas){
+            jmiVentasasActionPerformed();
+        }
     }
     
     public void jmiClientessActionPerformed(){
@@ -82,7 +85,7 @@ public class ControllerMain implements ActionListener{
         viewMain.revalidate();
         viewMain.repaint();
     }
-    public void jmiComprasActionPerformed(){
+    public void jmiVentasasActionPerformed(){
         viewMain.setContentPane( views[5]);
         viewMain.revalidate();
         viewMain.repaint();
@@ -102,7 +105,7 @@ public class ControllerMain implements ActionListener{
     }
     public void logOut() {
         int confirm = JOptionPane.showConfirmDialog(null, "¿Desea salir ?", "Aviso", JOptionPane.YES_NO_OPTION);
-        if(confirm == JOptionPane.YES_OPTION)
+        if(confirm == JOptionPane.YES_OPTION){
             
                     viewMain.jm_catalogos.setEnabled(false);
                     viewMain.jm_bar.setEnabled(false);
@@ -112,8 +115,18 @@ public class ControllerMain implements ActionListener{
                     viewMain.jmiUsuarios.setEnabled(false);
                     viewMain.jmenu_logout.setEnabled(false);
                     
-    
+        }
+        /*else 
+            viewMain.jm_catalogos.setEnabled(true);
+                    viewMain.jm_bar.setEnabled(true);
+                    viewMain.jm_reportes.setEnabled(true);
+                    viewMain.jm_operciones.setEnabled(true);
+                    viewMain.jm_acerca.setEnabled(true);
+                    viewMain.jmiUsuarios.setEnabled(true);
+                    viewMain.jmenu_logout.setEnabled(true);*/
             
-
-    }
+    
+    
+        
+}
 }

@@ -34,9 +34,9 @@ public class Main {
     private static ModelProvedores modelProvedores;
     private static ControllerProvedores controllerProvedores;
     
-    private static ViewCompras viewCompras;
-    private static ModelCompras modelCompras;
-    private static ControllerCompras controllerCompras;
+    private static ViewVentas viewVentas;
+    private static ModelVentas modelVentas;
+    private static ControllerVentas controllerVentas;
     
     public static void main(String[]ray){  
         
@@ -61,9 +61,9 @@ public class Main {
        modelRegist_users=new  ModelRegist_users();
        controllerRegist_users= new ControllerRegist_users(viewRegist_users, modelRegist_users);
        
-        viewCompras = new ViewCompras();
-        modelCompras=new ModelCompras();
-        controllerCompras= new ControllerCompras(viewCompras, modelCompras);
+        viewVentas = new ViewVentas();
+        modelVentas=new ModelVentas();
+        controllerVentas= new ControllerVentas(viewVentas, modelVentas);
         
          JPanel views[]=new JPanel[6];
          views[0]=viewUsuarios;
@@ -71,7 +71,7 @@ public class Main {
          views[2]=viewClientes;
          views[3]=view_productos;
          views[4]=view_provedores;
-         views[5]=viewCompras;
+         views[5]=viewVentas;
          
          
       //viewMain = new ViewMain();

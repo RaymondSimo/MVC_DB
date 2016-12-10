@@ -34,8 +34,8 @@ public class ViewMain extends javax.swing.JFrame {
         jmiProductos = new javax.swing.JMenuItem();
         jmiProveedores = new javax.swing.JMenuItem();
         jm_operciones = new javax.swing.JMenu();
-        jmiCompras = new javax.swing.JMenuItem();
         jmiVentas = new javax.swing.JMenuItem();
+        jmiCompras = new javax.swing.JMenuItem();
         jm_reportes = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -83,11 +83,11 @@ public class ViewMain extends javax.swing.JFrame {
         jm_operciones.setText("Operacioes");
         jm_operciones.setEnabled(false);
 
-        jmiCompras.setText("Compras");
-        jm_operciones.add(jmiCompras);
-
         jmiVentas.setText("Ventas");
         jm_operciones.add(jmiVentas);
+
+        jmiCompras.setText("Compras");
+        jm_operciones.add(jmiCompras);
 
         jm_bar.add(jm_operciones);
 
@@ -173,6 +173,22 @@ public class ViewMain extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ViewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
